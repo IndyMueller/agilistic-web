@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADUklEQVR42u2XT2hcVRTGf+fe914nmZl2mk7ScWz9Q8UgES26cK0LQQWxGxEEt67cCApWwQpCd6LgRlAE3QvShYhboQs1FU0siFKsmKaZ/JkkM5mZN+/e4+I9M2nIjJmSMgV9MIvH3HO/753zfd97V1RV+C9foqo/jJqAjpJAAPhREzCjJGBGLcL/CQxPQD2oA/TARDgcuJj+97euA5r+xNDZmKd2+Rxx8/cUXN0tDqIdT7l25WPqf3yK+hY2KlOefoP85OPZGgHkoAkoIHjXpPbLOzSWvsGGJUQCvG+BKhOnXuHIyRduWH9ABNLNXLzM4s+v01n/ERtOoJpklQbU47sbFKtnOHb/axibG5rEQALquyz+9Cqt1YvY8GgPvFcOYvDxGuNTT3B85jxiMl1rTzeDCPUXoaZPYsPSAMspqMeEh2nXL+Fdc7sOMSA2A9ebc4GYkGL1OYJcFe9ae1tOLK5To1B5KiUrBhev0Fr7jq2Vi2ndABKDRZg5IG78ysLsy9mL0/Q2E4NPGhQqTzM5/Sat+vdsXrtAe20W362jmhCO38PxB88TFe7L6sxwNlQfIyaifvVzVn97HxOWMu8L6jscOjxDsXqGzYUvaa9fAlWMHQMTIBKQtBcp3vEsUzPvpnVih0hCdYiJ6Lb+orH4FWLH0q5k8xcT0m39Se3yuXSeQSFtt/qse4qIISpO30QUqwextDfmWJo7S9K5jgnyOwikLtBkKwPmxv8kwMV1ckcf48iJ53c4Yj8ayGa/tfItS3NnUXWIze0du2J6ltshTE2aBGMnqD7yETY61jcfTF/hNa+wNP8Wiu8DLimQa21rYhvcbWEPlak89F4Krr5vFpg94geAzYUv8N11jM3vAhdELKoxvrtOVJjGhMVtTWjSxIYTVB7+gHD8rkx4Zv85IBnT/NSTiM3hu/W0xWIQsaAOF69hozKTD7xN9dFPCMfvxXVquM4ywdidVE5/SJQ/tafq95kD6bwa17+mfvUzXLyKi1dBE2xUplB5htLdL2UpCS5eZvPaBVzSoHTyRWw0se9vBVHdNVzvwRi8dxhj8YBr1+hszKM+Jlc6TZibypYmgMEYs2uLtPafvW77g8nsvy/z4H0axMbcDt+yB3s2HOnx/G8ocZ8Gki0qnwAAAABJRU5ErkJggg==">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-dark-32.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-light-32.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-dark-16.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-light-16.png" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-dark-180.png">
 <meta name="theme-color" content="#B5541A">
 
 <title>Agilistic — Agile Coaching & Transformation · Manuel Müller</title>
@@ -990,6 +992,30 @@ a { transition: color .2s ease, opacity .2s ease; }
   transform: scale(1.04);
   filter: drop-shadow(0 2px 8px rgba(229,75,60,0.3));
 }
+
+/* ── WISSEN ── */
+.wissen-section { background: var(--surface); }
+.wissen-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.wissen-all { font-size: 13px; font-weight: 500; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: gap .2s; white-space: nowrap; }
+.wissen-all:hover { gap: 10px; }
+.wissen-grid { display: grid; grid-template-columns: 1.15fr 1fr 1fr 1fr; gap: 1.5px; background: rgba(17,17,16,0.09); }
+.wissen-card { display: flex; flex-direction: column; padding: 2rem; background: var(--white); text-decoration: none; color: inherit; border-left: 3px solid transparent; transition: border-color .2s, background .2s; }
+.wissen-card:hover { border-left-color: var(--accent); background: #FBF8F2; }
+.wissen-card:hover .wissen-title { color: var(--accent); }
+.wissen-meta { display: flex; gap: .75rem; align-items: center; margin-bottom: .875rem; flex-wrap: wrap; }
+.wissen-cat { font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); background: rgba(181,84,26,0.1); padding: 3px 9px; border-radius: 100px; }
+.wissen-read { font-size: 11.5px; color: var(--muted); font-weight: 300; }
+.wissen-title { font-family: var(--font-d); font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; color: var(--black); margin-bottom: .75rem; transition: color .2s; }
+.wissen-text { font-size: 13.5px; color: var(--mid); font-weight: 300; line-height: 1.75; margin-bottom: 1.25rem; flex: 1; }
+.wissen-more { font-size: 12.5px; color: var(--accent); font-weight: 500; display: inline-flex; align-items: center; gap: 5px; }
+.wissen-card--tool { background: var(--black); }
+.wissen-card--tool:hover { background: #1E1C1A; }
+.wissen-card--tool .wissen-cat { background: rgba(181,84,26,0.2); }
+.wissen-card--tool .wissen-title { color: var(--white); font-size: 1.4rem; }
+.wissen-card--tool .wissen-text { color: rgba(246,243,238,0.5); }
+.wissen-card--tool .wissen-read { color: rgba(246,243,238,0.4); }
+@media (max-width: 1100px) { .wissen-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .wissen-grid { grid-template-columns: 1fr; } }
 </style>
 <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -1011,6 +1037,7 @@ a { transition: color .2s ease, opacity .2s ease; }
     <li><a href="#ueber">Über mich</a></li>
     <li><a href="#zertifikate">Zertifikate</a></li>
     <li><a href="#stimmen">Referenzen</a></li>
+    <li><a href="#wissen">Wissen</a></li>
     <li class="google-cal-nav"><script>
 (function() {
   var target = document.currentScript;
@@ -1166,6 +1193,7 @@ a { transition: color .2s ease, opacity .2s ease; }
       <div class="service-title">Workshop Moderation</div>
       <div class="service-text">Ihr sucht einen neutralen, unabhängigen Moderator für einen Workshop oder Offsite? Mit meiner Erfahrung in unterschiedlichen Gruppenkonstellationen helfe ich euch.</div>
       <a href="#kontakt" class="service-link">Mehr erfahren <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+      <a href="checkin-generator.html" class="service-link" style="margin-left:1.25rem;">Check-in Generator <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
     </div>
   </div>
 </section>
@@ -1189,7 +1217,7 @@ a { transition: color .2s ease, opacity .2s ease; }
       <ul class="about-list">
         <li>Dipl. El. Ing. FH (HSLU 2000) + MAS-ICT (HSLU 2009) — echter technischer Background</li>
         <li>Scrum Master seit 2013 — 12 Jahre Erfahrung, von der ersten Anstellung bis zum Lead SM bei LeSS-Einführungen</li>
-        <li>Erfahrung bei CSS Versicherung, Toradex, SBB, ISC-EJPD, Noser Engineering u.v.m.</li>
+        <li>Erfahrung bei CSS Versicherung, Toradex, SBB, ISC-EJPD, MediData u.v.m.</li>
         <li>Ich kann Menschen mitreissen, weil ich leidenschaftlich bin in dem, was ich tue</li>
         <li>Ich bin authentisch und ehrlich — ich kann nicht aus meiner Haut</li>
         <li>Moderator Agile Breakfast Luzern (SwissICT) seit 2018</li>
@@ -1221,7 +1249,7 @@ a { transition: color .2s ease, opacity .2s ease; }
     <div class="kunde-pill">Toradex AG</div>
     <div class="kunde-pill">SBB · BIM@SBB</div>
     <div class="kunde-pill">ISC-EJPD / fedpol</div>
-    <div class="kunde-pill">Noser Engineering AG</div>
+    <div class="kunde-pill">MediData AG</div>
   </div>
 </section>
 
@@ -1361,6 +1389,44 @@ a { transition: color .2s ease, opacity .2s ease; }
   </div>
 </section>
 
+<!-- WISSEN -->
+<section class="section wissen-section" id="wissen">
+  <div class="wissen-head reveal">
+    <div>
+      <div class="section-label">Wissen</div>
+      <h2>Aus der Praxis.</h2>
+      <p class="intro-text">Werkzeuge und Gedanken aus meinem Alltag als Coach — zum Mitnehmen und Ausprobieren.</p>
+    </div>
+    <a href="blog.html" class="wissen-all">Zum Blog <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+  </div>
+  <div class="wissen-grid reveal-stagger">
+    <a href="checkin-generator.html" class="wissen-card wissen-card--tool">
+      <div class="wissen-meta"><span class="wissen-cat">Tool</span><span class="wissen-read">Kostenlos · im Browser</span></div>
+      <div class="wissen-title">Check-in &amp; Check-out Generator</div>
+      <div class="wissen-text">130 kuratierte Impulsfragen für Retros, Dailys und Workshops — filterbar nach Phase, Tiefe und Anlass. Mit Timer und Präsentationsmodus.</div>
+      <span class="wissen-more">Generator öffnen <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 7h10M7 2l5 5-5 5"/></svg></span>
+    </a>
+    <a href="haende-schmutzig-machen.html" class="wissen-card">
+      <div class="wissen-meta"><span class="wissen-cat">Transformation</span><span class="wissen-read">5 Min.</span></div>
+      <div class="wissen-title">Als Agile Coach darf man sich die Hände schmutzig machen</div>
+      <div class="wissen-text">Wie tief muss ein Coach in die Materie, um Wirkung zu erzielen? Ein Erfahrungsbericht mit Jira Automations, Flight Levels und viel Handarbeit.</div>
+      <span class="wissen-more">Lesen <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 7h10M7 2l5 5-5 5"/></svg></span>
+    </a>
+    <a href="importance-of-hypothesis.html" class="wissen-card">
+      <div class="wissen-meta"><span class="wissen-cat">Methode</span><span class="wissen-read">2 Min.</span></div>
+      <div class="wissen-title">Importance of Hypothesis</div>
+      <div class="wissen-text">Ohne Hypothese kein Lernen. Wie das S.M.A.R.T.-Format Experimenten Struktur gibt — und warum eine gute Hypothese wie eine Wanderkarte ist.</div>
+      <span class="wissen-more">Lesen <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 7h10M7 2l5 5-5 5"/></svg></span>
+    </a>
+    <a href="global-scrum-gathering-london-2018.html" class="wissen-card">
+      <div class="wissen-meta"><span class="wissen-cat">Scrum Master</span><span class="wissen-read">8 Min.</span></div>
+      <div class="wissen-title">Global Scrum Gathering London</div>
+      <div class="wissen-text">900 Personen, 50 Nationen, 3 Tage: Was ich mitgenommen habe — von psychologischer Sicherheit bis zur Macht abweichender Meinungen.</div>
+      <span class="wissen-more">Lesen <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 7h10M7 2l5 5-5 5"/></svg></span>
+    </a>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="kontakt">
   <div class="reveal"><div class="section-label" style="color: var(--accent);">Kontakt</div>
@@ -1404,6 +1470,7 @@ a { transition: color .2s ease, opacity .2s ease; }
     <a href="#">Impressum</a>
     <a href="https://www.metanet.ch/datenschutz" target="_blank">Datenschutz</a>
     <a href="blog.html">Blog</a>
+    <a href="checkin-generator.html">Check-in Generator</a>
   </div>
   <div>
     <div class="footer-green">Green hosted · Schweiz · ©2026 Agilistic GmbH</div>

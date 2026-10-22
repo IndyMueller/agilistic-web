@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-dark-32.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-light-32.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-dark-16.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-light-16.png" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-dark-180.png">
+<meta name="theme-color" content="#B5541A">
+<title>Check-in &amp; Check-out Generator — Agilistic · Manuel Müller</title>
+<meta name="description" content="Interaktives Moderations-Tool mit 130 Check-in und Check-out Fragen für Retrospektiven, Daily Standups und Workshops — von Agilistic.">
+<link rel="canonical" href="https://www.agilistic.ch/checkin-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Agilistic">
+<meta property="og:title" content="Check-in &amp; Check-out Generator — Agilistic">
+<meta property="og:description" content="130 kuratierte Impulsfragen für Retrospektiven, Dailys und Workshops. Filterbar nach Phase, Tiefe, Tonalität und Anlass.">
+<meta property="og:url" content="https://www.agilistic.ch/checkin-generator.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.61.0/lucide.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:DM Sans,system-ui,-apple-system,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:DM Sans,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.\!container{width:100%!important}.container{width:100%}@media (min-width:640px){.\!container{max-width:640px!important}.container{max-width:640px}}@media (min-width:768px){.\!container{max-width:768px!important}.container{max-width:768px}}@media (min-width:1024px){.\!container{max-width:1024px!important}.container{max-width:1024px}}@media (min-width:1280px){.\!container{max-width:1280px!important}.container{max-width:1280px}}@media (min-width:1536px){.\!container{max-width:1536px!important}.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.bottom-6{bottom:1.5rem}.left-0{left:0}.left-3\.5{left:.875rem}.right-0{right:0}.right-6{right:1.5rem}.top-0{top:0}.top-3{top:.75rem}.z-50{z-index:50}.order-last{order:9999}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2\.5{margin-bottom:.625rem}.mb-3{margin-bottom:.75rem}.mb-5{margin-bottom:1.25rem}.mb-8{margin-bottom:2rem}.mt-0\.5{margin-top:.125rem}.mt-2{margin-top:.5rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-3{height:.75rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-\[3px\]{height:3px}.h-\[550px\]{height:550px}.h-full{height:100%}.min-h-\[400px\]{min-height:400px}.w-3{width:.75rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.translate-y-0{--tw-translate-y:0px}.translate-y-0,.translate-y-20{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-20{--tw-translate-y:5rem}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pop{0%{transform:scale(.98) translateY(4px);opacity:.5}to{transform:scale(1) translateY(0);opacity:1}}.animate-pop{animation:pop .25s cubic-bezier(.16,1,.3,1)}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-agilistic-border\/60>:not([hidden])~:not([hidden]){border-color:hsla(45,18%,87%,.6)}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl,.rounded-3xl{border-radius:6px}.rounded-full{border-radius:9999px}.rounded-lg,.rounded-xl{border-radius:4px}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-agilistic-accent{--tw-border-opacity:1;border-color:rgb(181 84 26/var(--tw-border-opacity,1))}.border-agilistic-accent\/20{border-color:rgba(181,84,26,.2)}.border-agilistic-border{--tw-border-opacity:1;border-color:rgb(228 225 216/var(--tw-border-opacity,1))}.border-agilistic-border\/60{border-color:hsla(45,18%,87%,.6)}.border-agilistic-border\/70{border-color:hsla(45,18%,87%,.7)}.border-agilistic-ink{--tw-border-opacity:1;border-color:rgb(17 17 16/var(--tw-border-opacity,1))}.border-teal-200{--tw-border-opacity:1;border-color:rgb(153 246 228/var(--tw-border-opacity,1))}.bg-agilistic-accent{--tw-bg-opacity:1;background-color:rgb(181 84 26/var(--tw-bg-opacity,1))}.bg-agilistic-accentSoft{--tw-bg-opacity:1;background-color:rgb(246 235 227/var(--tw-bg-opacity,1))}.bg-agilistic-accentSoft\/40{background-color:hsla(25,51%,93%,.4)}.bg-agilistic-bg{--tw-bg-opacity:1;background-color:rgb(250 250 247/var(--tw-bg-opacity,1))}.bg-agilistic-ink{--tw-bg-opacity:1;background-color:rgb(17 17 16/var(--tw-bg-opacity,1))}.bg-agilistic-subtle{--tw-bg-opacity:1;background-color:rgb(240 236 216/var(--tw-bg-opacity,1))}.bg-agilistic-subtle\/70{background-color:hsla(50,44%,89%,.7)}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-black\/15{background-color:rgba(0,0,0,.15)}.bg-black\/50{background-color:rgba(0,0,0,.5)}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.fill-agilistic-accent{fill:#b5541a}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-\[5vw\]{padding-left:5vw;padding-right:5vw}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-4{padding-bottom:1rem}.pl-10{padding-left:2.5rem}.pr-3{padding-right:.75rem}.pt-3{padding-top:.75rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:DM Sans,system-ui,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.\!font-bold{font-weight:700!important}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.15\]{line-height:1.15}.leading-snug{line-height:1.375}.\!tracking-\[-0\.03em\]{letter-spacing:-.03em!important}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-agilistic-accent{--tw-text-opacity:1;color:rgb(181 84 26/var(--tw-text-opacity,1))}.text-agilistic-ink{--tw-text-opacity:1;color:rgb(17 17 16/var(--tw-text-opacity,1))}.text-agilistic-muted{--tw-text-opacity:1;color:rgb(117 117 110/var(--tw-text-opacity,1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70/var(--tw-text-opacity,1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60/var(--tw-text-opacity,1))}.text-rose-800{--tw-text-opacity:1;color:rgb(159 18 57/var(--tw-text-opacity,1))}.text-teal-800{--tw-text-opacity:1;color:rgb(17 94 89/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-100{opacity:1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-agilistic-accent{--tw-ring-opacity:1;--tw-ring-color:rgb(181 84 26/var(--tw-ring-opacity,1))}.blur{--tw-blur:blur(8px)}.blur,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-blur-sm,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.selection\:bg-agilistic-accent ::-moz-selection{--tw-bg-opacity:1;background-color:rgb(181 84 26/var(--tw-bg-opacity,1))}.selection\:bg-agilistic-accent ::selection{--tw-bg-opacity:1;background-color:rgb(181 84 26/var(--tw-bg-opacity,1))}.selection\:text-white ::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white ::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:bg-agilistic-accent::-moz-selection{--tw-bg-opacity:1;background-color:rgb(181 84 26/var(--tw-bg-opacity,1))}.selection\:bg-agilistic-accent::selection{--tw-bg-opacity:1;background-color:rgb(181 84 26/var(--tw-bg-opacity,1))}.selection\:text-white::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:border-agilistic-accent:hover{--tw-border-opacity:1;border-color:rgb(181 84 26/var(--tw-border-opacity,1))}.hover\:border-agilistic-ink:hover{--tw-border-opacity:1;border-color:rgb(17 17 16/var(--tw-border-opacity,1))}.hover\:bg-agilistic-accentHover:hover{--tw-bg-opacity:1;background-color:rgb(138 62 14/var(--tw-bg-opacity,1))}.hover\:bg-agilistic-bg:hover{--tw-bg-opacity:1;background-color:rgb(250 250 247/var(--tw-bg-opacity,1))}.hover\:bg-agilistic-subtle:hover{--tw-bg-opacity:1;background-color:rgb(240 236 216/var(--tw-bg-opacity,1))}.hover\:text-agilistic-accent:hover{--tw-text-opacity:1;color:rgb(181 84 26/var(--tw-text-opacity,1))}.hover\:text-agilistic-ink:hover{--tw-text-opacity:1;color:rgb(17 17 16/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.focus\:border-agilistic-accent:focus{--tw-border-opacity:1;border-color:rgb(181 84 26/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-\[0\.99\]:active{--tw-scale-x:0.99;--tw-scale-y:0.99;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-agilistic-accent{--tw-text-opacity:1;color:rgb(181 84 26/var(--tw-text-opacity,1))}.dark\:divide-zinc-800:is(.dark *)>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(38 38 36/var(--tw-divide-opacity,1))}.dark\:border-teal-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(17 94 89/var(--tw-border-opacity,1))}.dark\:border-white:is(.dark *){--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.dark\:border-zinc-700:is(.dark *){--tw-border-opacity:1;border-color:rgb(61 61 58/var(--tw-border-opacity,1))}.dark\:border-zinc-700\/70:is(.dark *){border-color:rgba(61,61,58,.7)}.dark\:border-zinc-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(38 38 36/var(--tw-border-opacity,1))}.dark\:bg-agilistic-accent\/20:is(.dark *){background-color:rgba(181,84,26,.2)}.dark\:bg-amber-950\/60:is(.dark *){background-color:rgba(69,26,3,.6)}.dark\:bg-emerald-950\/60:is(.dark *){background-color:rgba(2,44,34,.6)}.dark\:bg-rose-950\/60:is(.dark *){background-color:rgba(76,5,25,.6)}.dark\:bg-teal-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(4 47 46/var(--tw-bg-opacity,1))}.dark\:bg-teal-950\/70:is(.dark *){background-color:rgba(4,47,46,.7)}.dark\:bg-white:is(.dark *){--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.dark\:bg-zinc-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(38 38 36/var(--tw-bg-opacity,1))}.dark\:bg-zinc-800\/70:is(.dark *){background-color:rgba(38,38,36,.7)}.dark\:bg-zinc-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(26 26 24/var(--tw-bg-opacity,1))}.dark\:bg-zinc-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(17 17 16/var(--tw-bg-opacity,1))}.dark\:text-amber-300:is(.dark *){--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.dark\:text-amber-400:is(.dark *){--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.dark\:text-emerald-300:is(.dark *){--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.dark\:text-emerald-400:is(.dark *){--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.dark\:text-rose-300:is(.dark *){--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.dark\:text-rose-400:is(.dark *){--tw-text-opacity:1;color:rgb(251 113 133/var(--tw-text-opacity,1))}.dark\:text-teal-300:is(.dark *){--tw-text-opacity:1;color:rgb(94 234 212/var(--tw-text-opacity,1))}.dark\:text-white:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.dark\:text-zinc-100:is(.dark *){--tw-text-opacity:1;color:rgb(244 244 245/var(--tw-text-opacity,1))}.dark\:text-zinc-200:is(.dark *){--tw-text-opacity:1;color:rgb(228 228 231/var(--tw-text-opacity,1))}.dark\:text-zinc-300:is(.dark *){--tw-text-opacity:1;color:rgb(212 212 216/var(--tw-text-opacity,1))}.dark\:text-zinc-400:is(.dark *){--tw-text-opacity:1;color:rgb(161 161 170/var(--tw-text-opacity,1))}.dark\:text-zinc-900:is(.dark *){--tw-text-opacity:1;color:rgb(26 26 24/var(--tw-text-opacity,1))}.dark\:hover\:border-agilistic-accent:hover:is(.dark *){--tw-border-opacity:1;border-color:rgb(181 84 26/var(--tw-border-opacity,1))}.dark\:hover\:border-zinc-500:hover:is(.dark *){--tw-border-opacity:1;border-color:rgb(113 113 122/var(--tw-border-opacity,1))}.dark\:hover\:border-zinc-600:hover:is(.dark *){--tw-border-opacity:1;border-color:rgb(82 82 91/var(--tw-border-opacity,1))}.dark\:hover\:bg-zinc-800:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(38 38 36/var(--tw-bg-opacity,1))}.dark\:hover\:bg-zinc-800\/50:hover:is(.dark *){background-color:rgba(38,38,36,.5)}.dark\:hover\:text-white:hover:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:inline-block{display:inline-block}.sm\:inline{display:inline}.sm\:min-h-\[460px\]{min-height:460px}.sm\:w-80{width:20rem}.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:gap-2{gap:.5rem}.sm\:p-12{padding:3rem}.sm\:px-2{padding-left:.5rem;padding-right:.5rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}}@media (min-width:768px){.md\:inline{display:inline}.md\:text-\[2\.75rem\]{font-size:2.75rem}}@media (min-width:1024px){.lg\:order-none{order:0}.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}}
+</style>
+<style>
+/* Agilistic Site-Chrome (identisch zu index.html / blog.html) */
+:root {
+  --black: #111110; --white: #FAFAF7; --accent: #B5541A; --accent-dark: #8A3E0E;
+  --gold: #C9A227; --mid: #3D3D3A; --muted: #888880;
+  --border: rgba(17,17,16,0.09); --surface: #F0ECD8;
+  --font-d: 'Bricolage Grotesque', sans-serif;
+  --font-b: 'DM Sans', sans-serif;
+}
+body { font-family: var(--font-b); background: #E8E5DC; line-height: 1.65; overflow-x: hidden; }
+html.dark body { background: #0A0A09; }
+.page-wrap { max-width: 1440px; margin: 0 auto; background: var(--white); box-shadow: 0 0 60px rgba(0,0,0,0.08); min-height: 100vh; display: flex; flex-direction: column; }
+html.dark .page-wrap { background: #111110; }
+.font-editorial { font-family: var(--font-d); font-weight: 800; letter-spacing: -0.04em; }
+.font-mono { font-variant-numeric: tabular-nums; }
+.site-nav {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0 5vw; min-height: 60px;
+  background: rgba(255,255,255,0.97); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+html.dark .tool-hero { border-bottom: 1px solid rgba(246,243,238,0.08); background: #0A0A09; }
+html.dark .site-nav { background: rgba(17,17,16,0.95); border-bottom-color: rgba(246,243,238,0.08); }
+.nav-left { display: flex; align-items: center; gap: 1.5rem; }
+.nav-logo img { height: 30px; width: auto; display: block; transition: transform .3s ease; }
+.nav-logo:hover img { transform: scale(1.04); }
+.nav-back { font-size: 13px; color: var(--mid); text-decoration: none; transition: color .2s; white-space: nowrap; }
+.nav-back:hover { color: var(--accent); }
+html.dark .nav-back { color: rgba(246,243,238,0.6); }
+.tool-hero { background: var(--black); padding: 5rem 5vw 4rem; }
+.tool-hero-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.tool-hero h1 { font-family: var(--font-d); font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 800; letter-spacing: -0.04em; color: var(--white); line-height: 1.05; }
+.tool-hero h1 span { color: var(--accent); }
+.tool-hero p { color: rgba(246,243,238,0.45); font-weight: 300; max-width: 540px; margin-top: 1.25rem; line-height: 1.8; }
+.article-cta { background: var(--black); padding: 4rem 5vw; text-align: center; margin-top: 3rem; border-top: 1px solid rgba(246,243,238,0.06); }
+.article-cta h3 { line-height: 1.15; font-family: var(--font-d); font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em; color: var(--white); margin-bottom: 0.875rem; }
+.article-cta p { color: rgba(246,243,238,0.45); font-weight: 300; margin: 0 auto 2rem; max-width: 560px; }
+.cta-actions { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+.btn-accent { background: var(--accent); color: white; padding: 12px 28px; border-radius: 100px; font-size: 14px; font-weight: 500; text-decoration: none; transition: background .2s; display: inline-block; }
+.btn-accent:hover { background: var(--accent-dark); }
+.btn-ghost { color: rgba(246,243,238,0.75); padding: 12px 24px; border-radius: 100px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid rgba(246,243,238,0.2); transition: border-color .2s, color .2s; display: inline-block; }
+.btn-ghost:hover { border-color: rgba(246,243,238,0.6); color: var(--white); }
+.site-footer {
+  background: #0A0A09; color: rgba(246,243,238,0.3);
+  padding: 2.5rem 5vw; display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem; font-size: 12.5px; font-weight: 300;
+}
+.site-footer a { color: rgba(246,243,238,0.3); text-decoration: none; transition: color .2s; }
+.site-footer a:hover { color: rgba(246,243,238,0.65); }
+.footer-logo img { height: 24px; width: auto; opacity: 0.55; display: block; }
+.footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+.footer-green { display: flex; align-items: center; gap: 5px; }
+.footer-green::before { content: '●'; color: #5DBF6E; font-size: 7px; }
+.custom-scrollbar::-webkit-scrollbar { width: 5px; height: 5px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(61,61,58,0.3); border-radius: 9999px; }
+@media (max-width: 640px) {
+  .site-nav { padding: .5rem 4vw; }
+  .nav-left { gap: .75rem; }
+  .nav-back { display: none; }
+  .tool-hero { padding: 3rem 5vw 2.5rem; }
+  .footer-links { gap: 1rem; }
+}
+</style>
+</head>
+<body class="text-agilistic-ink dark:text-zinc-100 antialiased transition-colors duration-200 selection:bg-agilistic-accent selection:text-white">
+<div class="page-wrap">
+
+  <!-- Navigation (Site-Chrome analog blog.html) + Tool-Steuerung -->
+  <nav class="site-nav">
+    <div class="nav-left">
+      <a class="nav-logo" href="index.html"><img src="data:image/png;base64,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" alt="Agilistic"></a>
+      <a class="nav-back" href="index.html">← Startseite</a>
+      <a class="nav-back" href="blog.html">Blog</a>
+    </div>
+
+      <!-- Tool Actions & Controls -->
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <!-- View Switch -->
+        <div class="bg-agilistic-subtle dark:bg-zinc-900 p-1 rounded-xl border border-agilistic-border dark:border-zinc-800 flex items-center text-xs font-semibold">
+          <button id="viewCardBtn" onclick="setViewMode('card')" class="px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 bg-white dark:bg-zinc-800 shadow-sm text-agilistic-ink dark:text-white">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-agilistic-accent"></i>
+            <span class="hidden sm:inline">Karte</span>
+          </button>
+          <button id="viewListBtn" onclick="setViewMode('list')" class="px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 text-agilistic-muted dark:text-zinc-400 hover:text-agilistic-ink dark:hover:text-white">
+            <i data-lucide="list" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">Katalog</span>
+          </button>
+        </div>
+
+        <!-- Add Custom Question Button -->
+        <button onclick="openCustomModal()" class="px-3.5 py-2 text-xs font-semibold rounded-full border border-agilistic-border dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-agilistic-accent dark:hover:border-agilistic-accent text-agilistic-ink dark:text-zinc-200 flex items-center gap-1.5 transition shadow-sm">
+          <i data-lucide="plus" class="w-3.5 h-3.5 text-agilistic-accent"></i>
+          <span class="hidden md:inline">Eigene Frage</span>
+        </button>
+
+        <!-- Backup: Export & Import -->
+        <button onclick="exportData()" title="Favoriten & eigene Fragen als JSON-Backup speichern" aria-label="Backup exportieren" class="p-2 text-agilistic-muted dark:text-zinc-400 hover:text-agilistic-ink dark:hover:text-white hover:bg-agilistic-subtle dark:hover:bg-zinc-800 rounded-full transition">
+          <i data-lucide="download" class="w-4 h-4"></i>
+        </button>
+        <button onclick="document.getElementById('importFile').click()" title="JSON-Backup wieder einlesen" aria-label="Backup importieren" class="p-2 text-agilistic-muted dark:text-zinc-400 hover:text-agilistic-ink dark:hover:text-white hover:bg-agilistic-subtle dark:hover:bg-zinc-800 rounded-full transition">
+          <i data-lucide="upload" class="w-4 h-4"></i>
+        </button>
+        <input type="file" id="importFile" accept="application/json,.json" class="hidden" onchange="importData(this)">
+
+        <!-- Presentation Mode toggle -->
+        <button onclick="togglePresentationMode()" title="Präsentationsmodus für Workshop / Beamer" aria-label="Präsentationsmodus" class="p-2 text-agilistic-muted dark:text-zinc-400 hover:text-agilistic-ink dark:hover:text-white hover:bg-agilistic-subtle dark:hover:bg-zinc-800 rounded-full transition">
+          <i id="presentationIcon" data-lucide="maximize" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button onclick="toggleDarkMode()" title="Erscheinungsbild wechseln" class="p-2 text-agilistic-muted dark:text-zinc-400 hover:text-agilistic-ink dark:hover:text-white hover:bg-agilistic-subtle dark:hover:bg-zinc-800 rounded-full transition">
+          <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+      </div>
+  </nav>
+
+  <!-- Hero (Stil wie blog.html) -->
+  <section class="tool-hero">
+    <div class="tool-hero-label">Check-in &amp; Check-out Generator · Facilitation Tool</div>
+    <h1>Menschen. <span>Räume.</span><br>Gute Fragen.</h1>
+    <p>Kein Methoden-Theater, sondern echte Verbindung: 130 kuratierte Check-in &amp; Check-out Impulse für wirksame Retrospektiven, Dailys und Workshops.</p>
+  </section>
+
+  <!-- Main Workspace Container -->
+  <div class="flex-1 w-full px-[5vw] py-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- Filter Sidebar (Col 4) -->
+    <aside id="filterSidebar" class="order-last lg:order-none lg:col-span-4 flex flex-col gap-6">
+      <div class="bg-white dark:bg-zinc-900 border border-agilistic-border dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-6">
+        
+        <!-- 01 Type Selection -->
+        <div>
+          <div class="flex items-center justify-between mb-2.5">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-agilistic-muted dark:text-zinc-400">01 / Meeting-Phase</label>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 bg-agilistic-subtle dark:bg-zinc-950 p-1 rounded-xl border border-agilistic-border/60 dark:border-zinc-800 text-xs font-semibold">
+            <button onclick="setTypeFilter('all')" id="btnTypeAll" class="py-2 rounded-lg transition text-agilistic-muted dark:text-zinc-400">Alle</button>
+            <button onclick="setTypeFilter('checkin')" id="btnTypeCheckin" class="py-2 rounded-lg transition bg-white dark:bg-zinc-800 text-agilistic-ink dark:text-white shadow-sm">Check-in</button>
+            <button onclick="setTypeFilter('checkout')" id="btnTypeCheckout" class="py-2 rounded-lg transition text-agilistic-muted dark:text-zinc-400">Check-out</button>
+          </div>
+        </div>
+
+        <!-- 02 Depth / Psychological Safety Level -->
+        <div>
+          <div class="flex justify-between items-center mb-2.5">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-agilistic-muted dark:text-zinc-400">02 / Tiefe & Vertrauen</label>
+            <span id="depthLabel" class="text-xs font-semibold text-agilistic-accent">Alle Stufen</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-xs font-semibold">
+            <button onclick="setDepthFilter(1)" id="depthBtn1" class="py-2.5 px-2 text-left rounded-xl border border-agilistic-border dark:border-zinc-800 transition hover:border-agilistic-accent">
+              <span class="block font-mono text-[10px] text-emerald-700 dark:text-emerald-400">STUFE 01</span>
+              <span class="text-xs text-agilistic-ink dark:text-zinc-200 font-semibold mt-0.5 block">Locker</span>
+            </button>
+            <button onclick="setDepthFilter(2)" id="depthBtn2" class="py-2.5 px-2 text-left rounded-xl border border-agilistic-border dark:border-zinc-800 transition hover:border-agilistic-accent">
+              <span class="block font-mono text-[10px] text-amber-700 dark:text-amber-400">STUFE 02</span>
+              <span class="text-xs text-agilistic-ink dark:text-zinc-200 font-semibold mt-0.5 block">Persönlich</span>
+            </button>
+            <button onclick="setDepthFilter(3)" id="depthBtn3" class="py-2.5 px-2 text-left rounded-xl border border-agilistic-border dark:border-zinc-800 transition hover:border-agilistic-accent">
+              <span class="block font-mono text-[10px] text-rose-700 dark:text-rose-400">STUFE 03</span>
+              <span class="text-xs text-agilistic-ink dark:text-zinc-200 font-semibold mt-0.5 block">Tiefgang</span>
+            </button>
+          </div>
+          <button onclick="setDepthFilter(0)" id="depthResetBtn" class="mt-2 text-[11px] text-agilistic-muted hover:text-agilistic-accent dark:text-zinc-400 transition flex items-center gap-1">
+            <i data-lucide="rotate-ccw" class="w-3 h-3"></i> Alle Vertrauensstufen einbeziehen
+          </button>
+        </div>
+
+        <!-- 03 Tone / Category Pills -->
+        <div>
+          <label class="text-[11px] font-mono uppercase tracking-widest text-agilistic-muted dark:text-zinc-400 block mb-2.5">03 / Tonalität & Fokus</label>
+          <div class="flex flex-wrap gap-1.5" id="categoryContainer">
+            <!-- Dynamically generated pills -->
+          </div>
+        </div>
+
+        <!-- 04 Context Select -->
+        <div>
+          <label class="text-[11px] font-mono uppercase tracking-widest text-agilistic-muted dark:text-zinc-400 block mb-2.5">04 / Anlass & Format</label>
+          <select id="contextSelect" onchange="setContextFilter(this.value)" class="w-full text-xs font-medium rounded-xl border border-agilistic-border dark:border-zinc-800 bg-agilistic-bg dark:bg-zinc-950 px-3.5 py-2.5 text-agilistic-ink dark:text-zinc-200 focus:outline-none focus:border-agilistic-accent">
+            <option value="all">Alle Formate (Framework-unabhängig)</option>
+            <option value="daily">Daily / Standup (Kurz & Fokus)</option>
+            <option value="retro">Retrospektive (Reflexion & Lernen)</option>
+            <option value="kickoff">Workshop / Projekt Kick-off</option>
+            <option value="teamevent">Team-Building & Offsite</option>
+            <option value="friday">Freitag / Wochenabschluss</option>
+          </select>
+        </div>
+
+        <!-- Filter Quick Status & Reset -->
+        <div class="pt-3 border-t border-agilistic-border dark:border-zinc-800 flex items-center justify-between text-xs text-agilistic-muted dark:text-zinc-400">
+          <span id="matchCounter" class="font-mono">– Fragen aktiv</span>
+          <button onclick="resetFilters()" class="text-agilistic-accent hover:underline font-semibold">Filter zurücksetzen</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content Area (Col 8) -->
+    <main class="lg:col-span-8 flex flex-col justify-between">
+      
+      <!-- CARD VIEW -->
+      <section id="cardViewSection" class="flex flex-col justify-between h-full">
+        
+        <!-- Big Editorial Presentation Card -->
+        <div id="questionCard" class="w-full bg-white dark:bg-zinc-900 border border-agilistic-border dark:border-zinc-800 rounded-3xl p-8 sm:p-12 shadow-sm flex flex-col justify-between min-h-[400px] sm:min-h-[460px] transition-all relative overflow-hidden">
+          
+          <!-- Subtle Top Accent Line -->
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-agilistic-accent"></div>
+
+          <!-- Card Top Bar: Badges & Actions -->
+          <div class="flex items-start justify-between gap-3 mb-8">
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="cardPhaseBadge" class="text-[11px] font-mono uppercase tracking-wider px-3 py-1 rounded-full bg-agilistic-accentSoft text-agilistic-accent border border-agilistic-accent/20">
+                Check-in
+              </span>
+              <span id="cardCategoryBadge" class="text-xs font-medium px-3 py-1 rounded-full bg-agilistic-subtle dark:bg-zinc-800 text-agilistic-ink dark:text-zinc-300">
+                Lustig & Schmunzeln
+              </span>
+              <span id="cardDepthBadge" class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300">
+                Stufe 1
+              </span>
+            </div>
+
+            <div class="flex items-center gap-1">
+              <button id="speakBtn" onclick="speakCurrentQuestion()" title="Frage laut vorlesen" class="p-2 text-agilistic-muted hover:text-agilistic-ink dark:hover:text-white rounded-xl hover:bg-agilistic-subtle dark:hover:bg-zinc-800 transition">
+                <i data-lucide="volume-2" class="w-5 h-5"></i>
+              </button>
+              <button id="cardFavBtn" onclick="toggleCurrentFavorite()" title="Als Favorit merken" class="p-2 text-agilistic-muted hover:text-agilistic-accent rounded-xl hover:bg-agilistic-subtle dark:hover:bg-zinc-800 transition">
+                <i id="cardFavIcon" data-lucide="heart" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- The Question Content (Editorial Serif Display) -->
+          <div class="my-auto py-6 text-left sm:px-2">
+            <span class="font-mono text-xs uppercase tracking-widest text-agilistic-accent block mb-3">Impulsfrage →</span>
+            <p id="cardPrompt" class="font-editorial text-3xl sm:text-4xl md:text-[2.75rem] !font-bold !tracking-[-0.03em] leading-[1.15] text-agilistic-ink dark:text-white transition-opacity duration-200">
+              Lade Frage...
+            </p>
+            <p id="cardContextNote" class="text-xs font-mono text-agilistic-muted dark:text-zinc-400 mt-5">
+              <!-- Context tip -->
+            </p>
+          </div>
+
+          <!-- Card Bottom Bar: Counter, Subtle Timer & Copy -->
+          <div class="pt-6 border-t border-agilistic-border dark:border-zinc-800 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div class="text-xs font-mono text-agilistic-muted dark:text-zinc-400">
+                KARTE <span id="cardCurrentIndex" class="font-bold text-agilistic-ink dark:text-white">01</span> / <span id="cardTotalCount">130</span>
+              </div>
+
+              <!-- Subtle Inline Timebox Pill -->
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-agilistic-subtle/70 dark:bg-zinc-800/70 border border-agilistic-border/70 dark:border-zinc-700/70 text-[11px] font-mono text-agilistic-muted dark:text-zinc-400">
+                <button id="timerToggleBtn" onclick="toggleTimer()" title="Timebox starten/pausieren" class="hover:text-agilistic-accent transition flex items-center gap-1">
+                  <i data-lucide="timer" class="w-3.5 h-3.5 text-agilistic-accent"></i>
+                  <span id="timerDisplay" class="font-semibold text-agilistic-ink dark:text-zinc-200">01:00</span>
+                </button>
+                <select id="timerDurationSelect" onchange="updateTimerDuration(this.value)" title="Dauer wählen" class="bg-transparent text-[10px] text-agilistic-muted dark:text-zinc-400 focus:outline-none cursor-pointer">
+                  <option value="30">30s</option>
+                  <option value="45">45s</option>
+                  <option value="60" selected>60s</option>
+                  <option value="90">90s</option>
+                </select>
+                <button onclick="resetTimer()" title="Timer zurücksetzen" class="hover:text-agilistic-ink dark:hover:text-white transition">
+                  <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Copy Action -->
+            <button onclick="copyQuestionToClipboard()" class="text-xs font-semibold px-3.5 py-2 rounded-xl border border-agilistic-border dark:border-zinc-700 hover:border-agilistic-ink dark:hover:border-zinc-500 text-agilistic-ink dark:text-zinc-200 transition flex items-center gap-1.5">
+              <i data-lucide="copy" class="w-3.5 h-3.5 text-agilistic-accent"></i>
+              <span id="copyFeedbackText">Für Miro / Teams kopieren</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <div class="w-full mt-6 flex items-center justify-between gap-3">
+          <button onclick="prevQuestion()" class="p-4 rounded-full bg-white dark:bg-zinc-900 border border-agilistic-border dark:border-zinc-800 hover:border-agilistic-ink dark:hover:border-zinc-600 text-agilistic-ink dark:text-zinc-200 transition shadow-sm" title="Vorherige Frage (Pfeil links)">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Big Shuffle Button in Agilistic Terracotta / Ink style -->
+          <button onclick="shuffleQuestion()" class="flex-1 max-w-md py-4 px-6 rounded-full bg-agilistic-accent hover:bg-agilistic-accentHover active:scale-[0.99] text-white font-semibold text-sm sm:text-base shadow-sm flex items-center justify-center gap-3 transition">
+            <i data-lucide="shuffle" class="w-4 h-4"></i>
+            <span>Zufällige Frage ziehen</span>
+            <span class="hidden sm:inline-block text-[11px] bg-black/15 px-2 py-0.5 rounded-full font-mono">Leertaste</span>
+          </button>
+
+          <button onclick="nextQuestion()" class="p-4 rounded-full bg-white dark:bg-zinc-900 border border-agilistic-border dark:border-zinc-800 hover:border-agilistic-ink dark:hover:border-zinc-600 text-agilistic-ink dark:text-zinc-200 transition shadow-sm" title="Nächste Frage (Pfeil rechts)">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- LIST VIEW -->
+      <section id="listViewSection" class="hidden flex-col h-[550px] bg-white dark:bg-zinc-900 border border-agilistic-border dark:border-zinc-800 rounded-3xl p-6 shadow-sm overflow-hidden">
+        <!-- List Header & Search -->
+        <div class="flex flex-col sm:flex-row gap-3 items-center justify-between pb-4 border-b border-agilistic-border dark:border-zinc-800">
+          <div class="relative w-full sm:w-80">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3 text-agilistic-muted"></i>
+            <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="130 Fragen nach Stichwort durchsuchen..." class="w-full pl-10 pr-3 py-2 text-xs rounded-xl bg-agilistic-bg dark:bg-zinc-950 border border-agilistic-border dark:border-zinc-800 text-agilistic-ink dark:text-zinc-100 focus:outline-none focus:border-agilistic-accent">
+          </div>
+          <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+            <button onclick="toggleFavFilter()" id="favOnlyBtn" class="text-xs px-3.5 py-2 rounded-xl border border-agilistic-border dark:border-zinc-800 hover:border-agilistic-accent flex items-center gap-1.5 font-semibold transition text-agilistic-ink dark:text-zinc-300">
+              <i data-lucide="heart" class="w-3.5 h-3.5 text-agilistic-accent"></i> Merkliste (<span id="favCount">0</span>)
+            </button>
+          </div>
+        </div>
+
+        <!-- Scrollable List of Questions -->
+        <div id="questionsListContainer" class="flex-1 overflow-y-auto custom-scrollbar divide-y divide-agilistic-border/60 dark:divide-zinc-800 mt-2">
+          <!-- Dynamic List items -->
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Aus dem Blog -->
+  <style>
+  .gen-blog { padding: 3.5rem 5vw 0; }
+  .gen-blog-head { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; margin-bottom:1.25rem; }
+  .gen-blog-label { font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+  .gen-blog-head h2 { font-family:var(--font-d); font-weight:800; letter-spacing:-0.03em; font-size:1.6rem; margin-top:.35rem; }
+  .gen-blog-all { font-size:13px; font-weight:500; color:var(--accent); text-decoration:none; }
+  .gen-blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:var(--border); }
+  html.dark .gen-blog-grid { background:rgba(246,243,238,0.08); }
+  .gen-blog-item { display:block; padding:1.5rem 1.75rem; background:var(--surface); text-decoration:none; border-left:3px solid transparent; transition:border-color .2s, background .2s; }
+  html.dark .gen-blog-item { background:#1A1A18; }
+  .gen-blog-item:hover { border-left-color:var(--accent); background:#EAE5CC; }
+  html.dark .gen-blog-item:hover { background:#262624; }
+  .gen-blog-cat { display:block; font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:.4rem; }
+  .gen-blog-title { display:block; font-family:var(--font-d); font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; line-height:1.3; color:var(--black); }
+  html.dark .gen-blog-title, html.dark .gen-blog-head h2 { color:var(--white); }
+  @media (max-width: 900px) { .gen-blog-grid { grid-template-columns:1fr; } }
+  </style>
+  <section class="gen-blog">
+    <div class="gen-blog-head">
+      <div><div class="gen-blog-label">Aus dem Blog</div><h2>Mehr Gedanken aus der Praxis</h2></div>
+      <a href="blog.html" class="gen-blog-all">Alle Artikel →</a>
+    </div>
+    <div class="gen-blog-grid">
+      <a href="haende-schmutzig-machen.html" class="gen-blog-item"><span class="gen-blog-cat">Transformation · 5 Min.</span><span class="gen-blog-title">Als Agile Coach darf man sich die Hände schmutzig machen</span></a>
+      <a href="importance-of-hypothesis.html" class="gen-blog-item"><span class="gen-blog-cat">Methode · 2 Min.</span><span class="gen-blog-title">Importance of Hypothesis</span></a>
+      <a href="global-scrum-gathering-london-2018.html" class="gen-blog-item"><span class="gen-blog-cat">Scrum Master · 8 Min.</span><span class="gen-blog-title">Global Scrum Gathering London</span></a>
+    </div>
+  </section>
+
+  <!-- CTA (Stil wie blog.html) -->
+  <section class="article-cta">
+    <h3>Moderation für euer nächstes Offsite?</h3>
+    <p>Ihr sucht einen neutralen Moderator für eine Retrospektive oder einen Workshop? Lass uns in einem kurzen Gespräch herausfinden, wie ich euch helfen kann — pragmatisch und Framework-unabhängig.</p>
+    <div class="cta-actions">
+      <a href="index.html#kontakt" class="btn-accent">Gespräch vereinbaren</a>
+      <a href="index.html#leistungen" class="btn-ghost">Leistungen ansehen</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <a class="footer-logo" href="index.html"><img src="data:image/png;base64,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" alt="Agilistic"></a>
+    <div class="footer-links">
+      <a href="index.html">Startseite</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://www.linkedin.com/in/indymueller/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.metanet.ch/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+    </div>
+    <div class="footer-green">Green hosted · Schweiz · ©2026 Agilistic GmbH</div>
+  </footer>
+
+</div><!-- /.page-wrap -->
+
+
+  <!-- Custom Question Modal -->
+  <div id="customModal" onclick="if (event.target === this) closeCustomModal()" role="dialog" aria-modal="true" aria-label="Eigene Moderationsfrage ergänzen" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white dark:bg-zinc-900 border border-agilistic-border dark:border-zinc-800 rounded-3xl max-w-lg w-full p-7 shadow-2xl animate-pop">
+      <div class="flex justify-between items-center mb-5">
+        <h3 class="font-editorial text-2xl text-agilistic-ink dark:text-white flex items-center gap-2">
+          Eigene Moderationsfrage ergänzen
+        </h3>
+        <button onclick="closeCustomModal()" class="text-agilistic-muted hover:text-agilistic-ink dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs font-medium">
+        <div>
+          <label class="block mb-1.5 font-mono uppercase text-[10px] tracking-wider text-agilistic-muted dark:text-zinc-400">Fragetext</label>
+          <textarea id="newPrompt" rows="3" placeholder="z. B. Welche Hypothese wollen wir im nächsten Sprint überprüfen?" class="w-full p-3.5 rounded-xl border border-agilistic-border dark:border-zinc-700 bg-agilistic-bg dark:bg-zinc-950 text-agilistic-ink dark:text-white focus:outline-none focus:border-agilistic-accent text-sm"></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block mb-1.5 font-mono uppercase text-[10px] tracking-wider text-agilistic-muted dark:text-zinc-400">Phase</label>
+            <select id="newType" class="w-full p-2.5 rounded-xl border border-agilistic-border dark:border-zinc-700 bg-agilistic-bg dark:bg-zinc-950 text-agilistic-ink dark:text-zinc-200">
+              <option value="checkin">Check-in</option>
+              <option value="checkout">Check-out</option>
+            </select>
+          </div>
+          <div>
+            <label class="block mb-1.5 font-mono uppercase text-[10px] tracking-wider text-agilistic-muted dark:text-zinc-400">Tiefe & Vertrauen</label>
+            <select id="newDepth" class="w-full p-2.5 rounded-xl border border-agilistic-border dark:border-zinc-700 bg-agilistic-bg dark:bg-zinc-950 text-agilistic-ink dark:text-zinc-200">
+              <option value="1">Stufe 1 (Locker)</option>
+              <option value="2">Stufe 2 (Persönlich)</option>
+              <option value="3">Stufe 3 (Tiefgang)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block mb-1.5 font-mono uppercase text-[10px] tracking-wider text-agilistic-muted dark:text-zinc-400">Kategorie</label>
+          <select id="newCategory" class="w-full p-2.5 rounded-xl border border-agilistic-border dark:border-zinc-700 bg-agilistic-bg dark:bg-zinc-950 text-agilistic-ink dark:text-zinc-200">
+            <option value="funny">Lustig & Schmunzeln</option>
+            <option value="reflect">Reflexion & Tiefgang</option>
+            <option value="energy">Energie & Barometer</option>
+            <option value="creative">Kreativ & Perspektive</option>
+            <option value="team">Teamgeist & Wertschätzung</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end gap-2">
+        <button onclick="closeCustomModal()" class="px-4 py-2.5 rounded-xl text-agilistic-muted dark:text-zinc-300 font-semibold text-xs hover:bg-agilistic-subtle dark:hover:bg-zinc-800 transition">Abbrechen</button>
+        <button onclick="saveCustomQuestion()" class="px-5 py-2.5 rounded-full bg-agilistic-accent text-white font-semibold text-xs hover:bg-agilistic-accentHover transition">Im Browser speichern</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-agilistic-ink text-white dark:bg-white dark:text-zinc-900 px-4 py-3 rounded-xl text-xs font-semibold shadow-xl flex items-center gap-2.5 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <i data-lucide="check" class="w-4 h-4 text-agilistic-accent"></i>
+    <span id="toastMessage">In Zwischenablage kopiert!</span>
+  </div>
+
+  <script>
+    // --- 1. QUESTIONS DATABASE (Comprehensive Collection - 130 Questions) ---
+    const DEFAULT_QUESTIONS = [
+      // ==========================================
+      // CHECK-INS: LUSTIG & SCHMUNZELN (25 Fragen)
+      // ==========================================
+      { id: 'ci-f-1', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Wenn deine aktuelle Arbeitswoche ein Filmtitel wäre, welcher wäre es?' },
+      { id: 'ci-f-2', type: 'checkin', category: 'funny', depth: 1, context: 'daily', text: 'Welches Tier spiegelt dein heutiges Energielevel am besten wider: Faultier, Erdmännchen auf Espresso oder verwirrte Taube?' },
+      { id: 'ci-f-3', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Was ist die absurdeste oder überflüssigste Fähigkeit, die du besitzt?' },
+      { id: 'ci-f-4', type: 'checkin', category: 'funny', depth: 1, context: 'teamevent', text: 'Wenn du für den Rest deines Lebens nur noch ein einziges Gericht essen dürftest – welches wäre es?' },
+      { id: 'ci-f-5', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Welcher Alltagsgegenstand verdient deiner Meinung nach dringend ein Firmware-Update?' },
+      { id: 'ci-f-6', type: 'checkin', category: 'funny', depth: 2, context: 'teamevent', text: 'Was war der seltsamste Google-Suchbegriff, den du in letzter Zeit getippt hast?' },
+      { id: 'ci-f-7', type: 'checkin', category: 'funny', depth: 1, context: 'daily', text: 'Welches Emoji beschreibt deinen Gemütszustand vor dem ersten Kaffee am besten?' },
+      { id: 'ci-f-8', type: 'checkin', category: 'funny', depth: 2, context: 'teamevent', text: 'Welchen Song kannst du heimlich auswendig mitsingen, obwohl du es vor Fremden leugnen würdest?' },
+      { id: 'ci-f-9', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Wenn du heute eine Superkraft hättest, die völlig nutzlos, aber amüsant ist – was könntest du tun?' },
+      { id: 'ci-f-10', type: 'checkin', category: 'funny', depth: 1, context: 'daily', text: 'Welcher fiktive Charakter (Comic, Serie, Film) wäre heute deine perfekte Urlaubsvertretung?' },
+      { id: 'ci-f-11', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Wenn dein Schreibtischstuhl sprechen könnte: Worüber würde er sich heute bei dir beschweren?' },
+      { id: 'ci-f-12', type: 'checkin', category: 'funny', depth: 1, context: 'teamevent', text: 'Welche völlig harmlose Sache bringt dich im Alltag heimlich auf die Palme (z. B. lautes Kauen, schief hängende Bilder)?' },
+      { id: 'ci-f-13', type: 'checkin', category: 'funny', depth: 1, context: 'daily', text: 'Wenn deine Kaffeetasse heute Morgen eine Nachricht auf dem Boden für dich gehabt hätte – wie würde sie lauten?' },
+      { id: 'ci-f-14', type: 'checkin', category: 'funny', depth: 2, context: 'teamevent', text: 'Was war dein fragwürdigster Modetrend oder Haarschnitt in deiner Jugend?' },
+      { id: 'ci-f-15', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Bei welcher olympischen Disziplin des Büroalltags (z. B. Passwort-Schnelltippen, Kaffeebecher-Balancieren) würdest du Gold holen?' },
+      { id: 'ci-f-16', type: 'checkin', category: 'funny', depth: 1, context: 'teamevent', text: 'Wenn du ein Küchengerät wärst: Welches wärst du heute und warum (z. B. überhitzter Toaster, entspannter Kühlschrank)?' },
+      { id: 'ci-f-17', type: 'checkin', category: 'funny', depth: 2, context: 'teamevent', text: 'Welchen völlig unnötigen Kauf hast du getätigt, den du trotzdem bis heute feierst?' },
+      { id: 'ci-f-18', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Wenn es ein Gesetz gäbe, das alle zwingt, ein bestimmtes Hobby auszuüben – welches würdest du verordnen?' },
+      { id: 'ci-f-19', type: 'checkin', category: 'funny', depth: 1, context: 'daily', text: 'Auf einer Skala von „Frisch gebügeltes Hemd“ bis „Jogginghose seit drei Tagen“: Wie fühlt sich dein Kopf heute an?' },
+      { id: 'ci-f-20', type: 'checkin', category: 'funny', depth: 2, context: 'teamevent', text: 'Welches Missgeschick in der Küche passiert dir immer wieder, obwohl du es besser wissen müsstest?' },
+      { id: 'ci-f-21', type: 'checkin', category: 'funny', depth: 1, context: 'all', text: 'Wenn Tiere plötzlich sprechen könnten: Welche Spezies wäre wohl am unhöflichsten?' },
+      { id: 'ci-f-22', type: 'checkin', category: 'funny', depth: 1, context: 'kickoff', text: 'Wenn wir für dieses Projekt ein Maskottchen wählen müssten – welches Tier oder Fabelwesen wäre es?' },
+      { id: 'ci-f-23', type: 'checkin', category: 'funny', depth: 2, context: 'teamevent', text: 'Welches Gerücht oder welchen Mythos hast du als Kind viel zu lange für wahr gehalten?' },
+      { id: 'ci-f-24', type: 'checkin', category: 'funny', depth: 1, context: 'friday', text: 'Wenn das herannahende Wochenende ein Getränk wäre: Welches steht für dich schon kalt?' },
+      { id: 'ci-f-25', type: 'checkin', category: 'funny', depth: 1, context: 'daily', text: 'Wie viele Browser-Tabs sind bei dir gerade offen – und wie viele davon brauchst du heute wirklich?' },
+
+      // ==========================================
+      // CHECK-INS: ENERGIE & BAROMETER (18 Fragen)
+      // ==========================================
+      { id: 'ci-e-1', type: 'checkin', category: 'energy', depth: 1, context: 'daily', text: 'Wie ist deine innere Wettervorhersage für heute (z. B. sonnig mit leichten Gewitterböen)?' },
+      { id: 'ci-e-2', type: 'checkin', category: 'energy', depth: 1, context: 'daily', text: 'Auf einer Skala von 1 (Akku bei 3%) bis 10 (frisch aufgeladen auf der Powerbank): Wo stehst du?' },
+      { id: 'ci-e-3', type: 'checkin', category: 'energy', depth: 2, context: 'daily', text: 'Was brauchst du heute vom Team, um mit voller Energie durchzustarten?' },
+      { id: 'ci-e-4', type: 'checkin', category: 'energy', depth: 1, context: 'daily', text: 'Welcher Gedanke hält dich heute noch am stärksten im Autopiloten fest?' },
+      { id: 'ci-e-5', type: 'checkin', category: 'energy', depth: 2, context: 'all', text: 'Was hat dir in den letzten 24 Stunden spürbar frische Energie geschenkt?' },
+      { id: 'ci-e-6', type: 'checkin', category: 'energy', depth: 2, context: 'retro', text: 'Was saugt dir aktuell im Alltag am meisten Konzentration oder Motivation ab?' },
+      { id: 'ci-e-7', type: 'checkin', category: 'energy', depth: 1, context: 'daily', text: 'Wenn dein aktuelles Energielevel eine Geschwindigkeit wäre: Bist du auf dem Spazierweg, der Landstrasse oder der Autobahn?' },
+      { id: 'ci-e-8', type: 'checkin', category: 'energy', depth: 1, context: 'all', text: 'Welche Farbe hat deine Stimmung heute Morgen und warum?' },
+      { id: 'ci-e-9', type: 'checkin', category: 'energy', depth: 2, context: 'daily', text: 'Was müsstest du heute von deiner To-do-Liste streichen, damit dein Stresslevel sofort um 30% sinkt?' },
+      { id: 'ci-e-10', type: 'checkin', category: 'energy', depth: 1, context: 'friday', text: 'Wie viel Prozent deiner Wochen-Batterie sind am heutigen Freitag noch übrig?' },
+      { id: 'ci-e-11', type: 'checkin', category: 'energy', depth: 2, context: 'all', text: 'Gelingt es dir heute gut, im Hier und Jetzt zu sein, oder ist dein Kopf noch bei einer anderen Baustelle?' },
+      { id: 'ci-e-12', type: 'checkin', category: 'energy', depth: 3, context: 'retro', text: 'Wo merkst du gerade körperlich oder mental, dass du dir in letzter Zeit zu viel zugemutet hast?' },
+      { id: 'ci-e-13', type: 'checkin', category: 'energy', depth: 1, context: 'daily', text: 'Bist du heute eher im Modus „Sprint“, „Marathon“ oder „Gemütlicher Spaziergang“?' },
+      { id: 'ci-e-14', type: 'checkin', category: 'energy', depth: 2, context: 'kickoff', text: 'Auf einer Skala von 1 bis 10: Wie gross ist deine Vorfreude bzw. Neugier auf unser Thema heute?' },
+      { id: 'ci-e-15', type: 'checkin', category: 'energy', depth: 2, context: 'all', text: 'Welche kleine Pause oder Belohnung hast du dir für den heutigen Tag fest eingeplant?' },
+      { id: 'ci-e-16', type: 'checkin', category: 'energy', depth: 1, context: 'daily', text: 'Mit welchen drei Worten würdest du deinen bisherigen Start in den Tag beschreiben?' },
+      { id: 'ci-e-17', type: 'checkin', category: 'energy', depth: 3, context: 'retro', text: 'Was bräuchtest du aktuell, um dich bei der Arbeit wieder deutlich entspannter und sicherer zu fühlen?' },
+      { id: 'ci-e-18', type: 'checkin', category: 'energy', depth: 2, context: 'daily', text: 'Auf welche eine Aufgabe heute hast du so richtig Lust?' },
+
+      // ==========================================
+      // CHECK-INS: KREATIV & OUT-OF-THE-BOX (18 Fragen)
+      // ==========================================
+      { id: 'ci-k-1', type: 'checkin', category: 'creative', depth: 1, context: 'kickoff', text: 'Wenn unser heutiges Meeting ein Fortbewegungsmittel wäre, worin sitzen wir gerade?' },
+      { id: 'ci-k-2', type: 'checkin', category: 'creative', depth: 2, context: 'kickoff', text: 'Wenn du eine Zeitmaschine hättest: Würdest du lieber 5 Jahre vorwärts oder rückwärts reisen?' },
+      { id: 'ci-k-3', type: 'checkin', category: 'creative', depth: 1, context: 'all', text: 'Wenn dein heutiger Tag ein Musik-Genre wäre (Jazz, Heavy Metal, Lo-Fi, Klassik): Welches läuft gerade?' },
+      { id: 'ci-k-4', type: 'checkin', category: 'creative', depth: 2, context: 'kickoff', text: 'Welches Gesetz oder welche ungeschriebene Regel der Arbeitswelt würdest du für einen Tag abschaffen?' },
+      { id: 'ci-k-5', type: 'checkin', category: 'creative', depth: 2, context: 'teamevent', text: 'Wenn du ein Buch über das aktuelle Teamkapitel schreiben würdest, wie würde der Titel lauten?' },
+      { id: 'ci-k-6', type: 'checkin', category: 'creative', depth: 1, context: 'teamevent', text: 'Wenn du morgen früh fliegen oder unsichtbar sein könntest – wofür würdest du dich entscheiden?' },
+      { id: 'ci-k-7', type: 'checkin', category: 'creative', depth: 2, context: 'kickoff', text: 'Angenommen, unser Projekt gewinnt in einem Jahr einen Preis: Was steht auf der Urkunde?' },
+      { id: 'ci-k-8', type: 'checkin', category: 'creative', depth: 1, context: 'all', text: 'Wenn du deinen Arbeitsplatz heute an jeden beliebigen Ort der Welt beamen könntest – wo würde dein Tisch stehen?' },
+      { id: 'ci-k-9', type: 'checkin', category: 'creative', depth: 2, context: 'teamevent', text: 'Mit welcher historischen oder berühmten Persönlichkeit würdest du gerne einmal zu Abend essen?' },
+      { id: 'ci-k-10', type: 'checkin', category: 'creative', depth: 1, context: 'all', text: 'Wenn du sofort ohne Übung ein Musikinstrument oder eine Fremdsprache perfekt beherrschen könntest – was wählst du?' },
+      { id: 'ci-k-11', type: 'checkin', category: 'creative', depth: 2, context: 'kickoff', text: 'Wenn wir für unser Vorhaben ein unbegrenztes Budget, aber nur 48 Stunden Zeit hätten – was würden wir zuerst tun?' },
+      { id: 'ci-k-12', type: 'checkin', category: 'creative', depth: 1, context: 'teamevent', text: 'Welche fiktive Welt aus einem Buch, Film oder Spiel würdest du am liebsten für eine Woche als Tourist besuchen?' },
+      { id: 'ci-k-13', type: 'checkin', category: 'creative', depth: 2, context: 'retro', text: 'Wenn der letzte Monat ein Kunstwerk oder Gemälde wäre: Wie sähe es aus (abstrakt, buntes Chaos, klare Linien)?' },
+      { id: 'ci-k-14', type: 'checkin', category: 'creative', depth: 1, context: 'all', text: 'Wenn du eine neue Eissorte erfinden müsstest, die nach deiner aktuellen Woche schmeckt: Wie heisst sie?' },
+      { id: 'ci-k-15', type: 'checkin', category: 'creative', depth: 2, context: 'teamevent', text: 'Welchen Beruf aus deiner Kindheitsträumerei würdest du heute gerne mal für ein Praktikum ausprobieren?' },
+      { id: 'ci-k-16', type: 'checkin', category: 'creative', depth: 3, context: 'teamevent', text: 'Wenn du deinem 18-jährigen Ich eine einzige SMS mit maximal 10 Wörtern schicken könntest: Was stünde drin?' },
+      { id: 'ci-k-17', type: 'checkin', category: 'creative', depth: 1, context: 'kickoff', text: 'Wenn unser Team eine Band wäre: Welches Instrument würdest du spielen oder welche Rolle hättest du?' },
+      { id: 'ci-k-18', type: 'checkin', category: 'creative', depth: 2, context: 'all', text: 'Welche Erfindung, die es leider noch nicht gibt, würde deinen Alltag sofort revolutionieren?' },
+
+      // ==========================================
+      // CHECK-INS: REFLEXION & TIEFGANG (18 Fragen)
+      // ==========================================
+      { id: 'ci-r-1', type: 'checkin', category: 'reflect', depth: 2, context: 'retro', text: 'Was war ein unerwarteter Lernmoment aus den letzten Tagen, der dir im Gedächtnis blieb?' },
+      { id: 'ci-r-2', type: 'checkin', category: 'reflect', depth: 2, context: 'daily', text: 'Auf welches konkrete Ergebnis wärst du am Ende des Tages besonders stolz?' },
+      { id: 'ci-r-3', type: 'checkin', category: 'reflect', depth: 3, context: 'retro', text: 'Was fällt dir im Moment schwerer, als du es dir oder anderen gegenüber eingestehen magst?' },
+      { id: 'ci-r-4', type: 'checkin', category: 'reflect', depth: 3, context: 'retro', text: 'Welche Sorge oder welcher Zweifel schwirrt dir heute noch im Hinterkopf herum?' },
+      { id: 'ci-r-5', type: 'checkin', category: 'reflect', depth: 2, context: 'retro', text: 'Welche Gewohnheit hat dir in letzter Zeit geholfen, fokussiert zu bleiben?' },
+      { id: 'ci-r-6', type: 'checkin', category: 'reflect', depth: 3, context: 'retro', text: 'In welcher Hinsicht wünschst du dir im Team mehr Mut oder Offenheit?' },
+      { id: 'ci-r-7', type: 'checkin', category: 'reflect', depth: 2, context: 'all', text: 'Wann warst du diese Woche so richtig im „Flow“ und hast die Zeit vergessen?' },
+      { id: 'ci-r-8', type: 'checkin', category: 'reflect', depth: 3, context: 'retro', text: 'Welchen Fehler oder Umweg aus der letzten Zeit siehst du mittlerweile als wertvolle Erfahrung?' },
+      { id: 'ci-r-9', type: 'checkin', category: 'reflect', depth: 2, context: 'kickoff', text: 'Was müsste am Ende dieses Projekts passieren, damit du rückblickend sagst: „Das hat sich voll gelohnt“?' },
+      { id: 'ci-r-10', type: 'checkin', category: 'reflect', depth: 2, context: 'friday', text: 'Worauf blickst du in dieser Arbeitswoche mit einem Lächeln zurück?' },
+      { id: 'ci-r-11', type: 'checkin', category: 'reflect', depth: 3, context: 'retro', text: 'Wo sagst du im Arbeitsalltag aktuell noch zu oft „Ja“, obwohl ein „Nein“ gesünder wäre?' },
+      { id: 'ci-r-12', type: 'checkin', category: 'reflect', depth: 2, context: 'all', text: 'Welcher Ratschlag, den du mal bekommen hast, begleitet dich bis heute?' },
+      { id: 'ci-r-13', type: 'checkin', category: 'reflect', depth: 3, context: 'retro', text: 'Welche Veränderung der letzten Monate hat dich am meisten herausgefordert?' },
+      { id: 'ci-r-14', type: 'checkin', category: 'reflect', depth: 2, context: 'daily', text: 'Wenn du heute nur eine einzige Sache wirklich exzellent erledigen könntest – welche wäre das?' },
+      { id: 'ci-r-15', type: 'checkin', category: 'reflect', depth: 3, context: 'teamevent', text: 'Was ist dir in deiner Arbeit über das reine Gehalt hinaus wirklich wichtig (Sinn, Freiheit, Miteinander)?' },
+      { id: 'ci-r-16', type: 'checkin', category: 'reflect', depth: 2, context: 'retro', text: 'Welche Routine oder welchen Prozess sollten wir hinterfragen, weil wir ihn nur noch „aus Gewohnheit“ machen?' },
+      { id: 'ci-r-17', type: 'checkin', category: 'reflect', depth: 2, context: 'kickoff', text: 'Welches Risiko sollten wir bei unserem Vorhaben bewusst im Auge behalten?' },
+      { id: 'ci-r-18', type: 'checkin', category: 'reflect', depth: 3, context: 'retro', text: 'Wann hast du dich zuletzt ausserhalb deiner Komfortzone bewegt und wie hat sich das angefühlt?' },
+
+      // ==========================================
+      // CHECK-INS: TEAMGEIST & WERTSCHÄTZUNG (16 Fragen)
+      // ==========================================
+      { id: 'ci-t-1', type: 'checkin', category: 'team', depth: 2, context: 'retro', text: 'Für welche kleine Geste oder Hilfe aus dem Team bist du diese Woche dankbar?' },
+      { id: 'ci-t-2', type: 'checkin', category: 'team', depth: 2, context: 'kickoff', text: 'Welche besondere Stärke bringst du heute mit an unseren gemeinsamen Tisch?' },
+      { id: 'ci-t-3', type: 'checkin', category: 'team', depth: 1, context: 'teamevent', text: 'Was verbindet uns als Team abseits von Deadlines und Projekten?' },
+      { id: 'ci-t-4', type: 'checkin', category: 'team', depth: 2, context: 'retro', text: 'Wem im Team möchtest du heute kurz Danke sagen und wofür?' },
+      { id: 'ci-t-5', type: 'checkin', category: 'team', depth: 3, context: 'retro', text: 'Wie können wir uns gegenseitig unterstützen, damit die Woche weniger stressig wird?' },
+      { id: 'ci-t-6', type: 'checkin', category: 'team', depth: 2, context: 'teamevent', text: 'Welche Eigenschaft schätzt du an der Person, die in der Teilnehmerliste (oder im Raum) rechts neben dir sitzt?' },
+      { id: 'ci-t-7', type: 'checkin', category: 'team', depth: 1, context: 'all', text: 'Was war unser bisher schönster oder lustigster gemeinsamer Moment als Team?' },
+      { id: 'ci-t-8', type: 'checkin', category: 'team', depth: 2, context: 'kickoff', text: 'Worauf können sich die anderen in diesem Projekt zu 100% bei dir verlassen?' },
+      { id: 'ci-t-9', type: 'checkin', category: 'team', depth: 3, context: 'retro', text: 'Wann hast du dich in unserem Team zuletzt so richtig gehört und verstanden gefühlt?' },
+      { id: 'ci-t-10', type: 'checkin', category: 'team', depth: 2, context: 'daily', text: 'Bei welchem Thema könntest du heute einen kurzen Sparringspartner oder ein zweites Augenpaar gebrauchen?' },
+      { id: 'ci-t-11', type: 'checkin', category: 'team', depth: 2, context: 'friday', text: 'Welchen gemeinsamen Team-Erfolg dieser Woche sollten wir nicht als selbstverständlich abtun?' },
+      { id: 'ci-t-12', type: 'checkin', category: 'team', depth: 3, context: 'retro', text: 'Was bräuchte es, damit wir im Team noch offener mit Fehlern oder Kritik umgehen können?' },
+      { id: 'ci-t-13', type: 'checkin', category: 'team', depth: 1, context: 'teamevent', text: 'Wenn ein neues Teammitglied heute bei uns starten würde: Welchen Geheimtipp über uns würdest du ihm geben?' },
+      { id: 'ci-t-14', type: 'checkin', category: 'team', depth: 2, context: 'all', text: 'Von wem im Team hast du dir in letzter Zeit eine gute Arbeitsweise oder Gewohnheit abgeschaut?' },
+      { id: 'ci-t-15', type: 'checkin', category: 'team', depth: 2, context: 'kickoff', text: 'Wie schaffen wir es heute, dass alle zu Wort kommen und wir ein richtig gutes Gespräch führen?' },
+      { id: 'ci-t-16', type: 'checkin', category: 'team', depth: 3, context: 'retro', text: 'Wo hast du das Gefühl, aktuell alleine auf weiter Flur zu kämpfen, und wünschst dir Rückendeckung?' },
+
+      // ==========================================
+      // CHECK-OUTS: ALLE KATEGORIEN (35 Fragen)
+      // ==========================================
+      { id: 'co-f-1', type: 'checkout', category: 'funny', depth: 1, context: 'friday', text: 'Was ist die erste Belohnung, die du dir nach diesem Feierabend gönnst?' },
+      { id: 'co-f-2', type: 'checkout', category: 'funny', depth: 1, context: 'all', text: 'Wenn dieses Meeting eine Bewertung auf TripAdvisor bekommen würde: Wie viele Sterne und welches Fazit?' },
+      { id: 'co-f-3', type: 'checkout', category: 'funny', depth: 1, context: 'friday', text: 'Welches Meme oder GIF beschreibt deinen Zustand nach diesem Meeting am treffendsten?' },
+      { id: 'co-f-4', type: 'checkout', category: 'funny', depth: 1, context: 'daily', text: 'Was tust du als Erstes nach diesem Call: Tab-Friedhof schliessen, Strecken oder Kaffeemaschine plündern?' },
+      { id: 'co-f-5', type: 'checkout', category: 'funny', depth: 2, context: 'friday', text: 'Auf welches Essen oder Ritual am Wochenende freust du dich heute schon wie ein kleines Kind?' },
+      { id: 'co-f-6', type: 'checkout', category: 'funny', depth: 1, context: 'all', text: 'Wenn unser heutiges Meeting ein Kinofilm gewesen wäre: Welches Genre haben wir gerade gedreht?' },
+      { id: 'co-f-7', type: 'checkout', category: 'funny', depth: 1, context: 'friday', text: 'Wie lautet dein inoffizielles Motto für das kommende Wochenende?' },
+      { id: 'co-f-8', type: 'checkout', category: 'funny', depth: 1, context: 'daily', text: 'Welcher Song läuft in deinem Kopf, während du gleich auf „Meeting verlassen“ klickst?' },
+
+      { id: 'co-r-1', type: 'checkout', category: 'reflect', depth: 2, context: 'retro', text: 'Was ist dein wichtigster persönlicher Takeaway aus unserer heutigen Runde?' },
+      { id: 'co-r-2', type: 'checkout', category: 'reflect', depth: 2, context: 'daily', text: 'Welche eine Sache wirst du heute als direkte Folge dieses Gesprächs anders anpacken?' },
+      { id: 'co-r-3', type: 'checkout', category: 'reflect', depth: 2, context: 'retro', text: 'Welche Frage ist für dich heute noch offen geblieben oder bedarf eines Nachfassens?' },
+      { id: 'co-r-4', type: 'checkout', category: 'reflect', depth: 3, context: 'retro', text: 'Was war der Moment im Meeting, an dem du innerlich gezögert oder besonders nachgedacht hast?' },
+      { id: 'co-r-5', type: 'checkout', category: 'reflect', depth: 2, context: 'friday', text: 'Welchen Erfolg aus der Arbeitswoche nimmst du mit einem guten Gefühl mit ins Wochenende?' },
+      { id: 'co-r-6', type: 'checkout', category: 'reflect', depth: 2, context: 'kickoff', text: 'Was ist für dich nach diesem Termin der wichtigste nächste kleine Schritt?' },
+      { id: 'co-r-7', type: 'checkout', category: 'reflect', depth: 2, context: 'all', text: 'Haben wir unsere Zeit heute sinnvoll genutzt – und was machen wir beim nächsten Mal noch 10% besser?' },
+      { id: 'co-r-8', type: 'checkout', category: 'reflect', depth: 3, context: 'retro', text: 'Worüber hast du heute deine Meinung geändert oder eine neue Perspektive gewonnen?' },
+      { id: 'co-r-9', type: 'checkout', category: 'reflect', depth: 2, context: 'all', text: 'Wenn jemand das heutige Meeting verpasst hat: Welchen einen Satz würdest du ihm als Zusammenfassung sagen?' },
+
+      { id: 'co-e-1', type: 'checkout', category: 'energy', depth: 1, context: 'all', text: 'Mit welchem Ein-Wort-Fazit verlässt du diesen Raum?' },
+      { id: 'co-e-2', type: 'checkout', category: 'energy', depth: 1, context: 'daily', text: 'Wie hat sich dein Energielevel im Verlauf des Meetings verändert (gestiegen, stabil, gesunken)?' },
+      { id: 'co-e-3', type: 'checkout', category: 'energy', depth: 2, context: 'retro', text: 'Was brauchst du jetzt unmittelbar nach diesem Termin, um den Kopf kurz wieder frei zu bekommen?' },
+      { id: 'co-e-4', type: 'checkout', category: 'energy', depth: 2, context: 'friday', text: 'Was lässt du heute bewusst auf der Arbeit zurück und nimmst es nicht mit in den Feierabend?' },
+      { id: 'co-e-5', type: 'checkout', category: 'energy', depth: 1, context: 'kickoff', text: 'Auf einer Skala von 1 bis 10: Wie zuversichtlich blickst du jetzt auf unsere nächsten Schritte?' },
+      { id: 'co-e-6', type: 'checkout', category: 'energy', depth: 2, context: 'all', text: 'Geht es dir nach unserer Runde besser, gleich oder gestresster als vor einer Stunde?' },
+      { id: 'co-e-7', type: 'checkout', category: 'energy', depth: 1, context: 'friday', text: 'Wie schaltest du heute Abend konkret vom Arbeitsmodus in den Freizeitmodus um?' },
+
+      { id: 'co-k-1', type: 'checkout', category: 'creative', depth: 1, context: 'all', text: 'Wenn unsere heutigen Beschlüsse eine Schlagzeile in der morgigen Zeitung wären: Wie würde sie lauten?' },
+      { id: 'co-k-2', type: 'checkout', category: 'creative', depth: 1, context: 'teamevent', text: 'Wenn du aus dem heutigen Meeting eine Postkarte verschicken müsstest: Welches Motiv wäre vorne drauf?' },
+      { id: 'co-k-3', type: 'checkout', category: 'creative', depth: 2, context: 'retro', text: 'Welches Symbol oder welcher Gegenstand beschreibt unser heutiges Ergebnis am besten?' },
+      { id: 'co-k-4', type: 'checkout', category: 'creative', depth: 1, context: 'kickoff', text: 'Wenn unser Projekt ein Schiff wäre: Wie ist die Sicht und der Wellengang nach diesem Meeting?' },
+      { id: 'co-k-5', type: 'checkout', category: 'creative', depth: 2, context: 'all', text: 'Welcher Funke oder welche kleine Idee aus diesem Gespräch hat das Potenzial, richtig gross zu werden?' },
+
+      { id: 'co-t-1', type: 'checkout', category: 'team', depth: 2, context: 'retro', text: 'Welcher Beitrag einer anderen Person hat dir heute am meisten geholfen oder eingeleuchtet?' },
+      { id: 'co-t-2', type: 'checkout', category: 'team', depth: 2, context: 'retro', text: 'Was hat heute in unserer Diskussion besonders gut und wertschätzend funktioniert?' },
+      { id: 'co-t-3', type: 'checkout', category: 'team', depth: 3, context: 'retro', text: 'Gibt es unausgesprochene Punkte oder Missverständnisse, die wir nicht ungeklärt im Raum stehen lassen sollten?' },
+      { id: 'co-t-4', type: 'checkout', category: 'team', depth: 2, context: 'kickoff', text: 'Fühlst du dich für deinen nächsten Schritt vom Team ausreichend unterstützt?' },
+      { id: 'co-t-5', type: 'checkout', category: 'team', depth: 1, context: 'friday', text: 'Was wünschst du deinen Teamkolleginnen und -kollegen für die kommenden Tage?' },
+      { id: 'co-t-6', type: 'checkout', category: 'team', depth: 2, context: 'all', text: 'Wem drückst du für eine anstehende Aufgabe in dieser Woche ganz besonders die Daumen?' }
+    ];
+
+    const CATEGORIES = {
+      funny: { label: 'Lustig & Schmunzeln', icon: 'smile' },
+      reflect: { label: 'Reflexion & Tiefgang', icon: 'compass' },
+      energy: { label: 'Energie & Barometer', icon: 'zap' },
+      creative: { label: 'Kreativ & Perspektive', icon: 'lightbulb' },
+      team: { label: 'Team & Wertschätzung', icon: 'users' }
+    };
+
+    // --- 1b. ROBUSTHEIT ---
+    // Icons sind Dekoration: Ein blockiertes Icon-CDN darf die Bedienung nicht lahmlegen.
+    function safeIcons() {
+      try {
+        if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+      } catch (e) { /* Icons bleiben aus, Tool bleibt bedienbar */ }
+    }
+
+    // --- 2. STATE MANAGEMENT ---
+    let state = {
+      questions: [],
+      filteredQuestions: [],
+      currentIndex: 0,
+      activeType: 'checkin',
+      activeDepth: 0,
+      selectedCategories: new Set(['funny', 'reflect', 'energy', 'creative', 'team']),
+      activeContext: 'all',
+      searchQuery: '',
+      showFavoritesOnly: false,
+      favorites: new Set(),
+      viewMode: 'card',
+      timerSeconds: 60,
+      timerTotal: 60,
+      timerInterval: null,
+      isTimerRunning: false
+    };
+
+    function loadSavedData() {
+      try {
+        const savedCustom = localStorage.getItem('custom_checkin_questions');
+        const customItems = savedCustom ? JSON.parse(savedCustom) : [];
+        state.questions = [...DEFAULT_QUESTIONS, ...customItems];
+
+        const savedFavs = localStorage.getItem('checkin_favorites');
+        if (savedFavs) {
+          state.favorites = new Set(JSON.parse(savedFavs));
+        }
+      } catch (e) {
+        state.questions = [...DEFAULT_QUESTIONS];
+      }
+    }
+
+    function saveFavorites() {
+      try {
+        localStorage.setItem('checkin_favorites', JSON.stringify([...state.favorites]));
+      } catch (e) {}
+    }
+
+    function saveCustomQuestionsToStorage(newQ) {
+      try {
+        const savedCustom = localStorage.getItem('custom_checkin_questions');
+        const list = savedCustom ? JSON.parse(savedCustom) : [];
+        list.push(newQ);
+        localStorage.setItem('custom_checkin_questions', JSON.stringify(list));
+      } catch (e) {}
+    }
+
+    // --- 3. FILTERING LOGIC ---
+    function applyFilters() {
+      state.filteredQuestions = state.questions.filter(q => {
+        if (state.activeType !== 'all' && q.type !== state.activeType) return false;
+        if (state.activeDepth !== 0 && q.depth !== state.activeDepth) return false;
+        if (!state.selectedCategories.has(q.category)) return false;
+        if (state.activeContext !== 'all' && q.context !== 'all' && q.context !== state.activeContext) return false;
+        if (state.showFavoritesOnly && !state.favorites.has(q.id)) return false;
+        if (state.searchQuery.trim() !== '') {
+          const matchText = q.text.toLowerCase().includes(state.searchQuery.toLowerCase());
+          if (!matchText) return false;
+        }
+        return true;
+      });
+
+      const matchCounter = document.getElementById('matchCounter');
+      const cardTotalCount = document.getElementById('cardTotalCount');
+      const favCount = document.getElementById('favCount');
+
+      if (matchCounter) matchCounter.textContent = `${state.filteredQuestions.length} Fragen aktiv`;
+      if (cardTotalCount) cardTotalCount.textContent = String(state.filteredQuestions.length).padStart(2, '0');
+      if (favCount) favCount.textContent = state.favorites.size;
+
+      if (state.currentIndex >= state.filteredQuestions.length) {
+        state.currentIndex = Math.max(0, state.filteredQuestions.length - 1);
+      }
+
+      renderCurrentQuestionCard();
+      renderListView();
+      safeIcons();
+    }
+
+    // --- 4. CARD RENDERING & NAVIGATION ---
+    function renderCurrentQuestionCard() {
+      const promptEl = document.getElementById('cardPrompt');
+      const indexEl = document.getElementById('cardCurrentIndex');
+      const phaseBadge = document.getElementById('cardPhaseBadge');
+      const categoryBadge = document.getElementById('cardCategoryBadge');
+      const depthBadge = document.getElementById('cardDepthBadge');
+      const favIcon = document.getElementById('cardFavIcon');
+      const cardContextNote = document.getElementById('cardContextNote');
+
+      if (state.filteredQuestions.length === 0) {
+        promptEl.textContent = 'Keine Fragen mit dieser Filterkombination gefunden.';
+        promptEl.classList.add('text-agilistic-muted');
+        indexEl.textContent = '00';
+        phaseBadge.textContent = '–';
+        categoryBadge.textContent = '–';
+        depthBadge.textContent = '–';
+        cardContextNote.textContent = 'Tipp: Setze links einzelne Filter zurück, um wieder Fragen einzublenden.';
+        return;
+      }
+
+      promptEl.classList.remove('text-agilistic-muted');
+      const q = state.filteredQuestions[state.currentIndex];
+      promptEl.textContent = `«${q.text}»`;
+      indexEl.textContent = String(state.currentIndex + 1).padStart(2, '0');
+
+      phaseBadge.textContent = q.type === 'checkin' ? 'Check-in' : 'Check-out';
+      if (q.type === 'checkin') {
+        phaseBadge.className = 'text-[11px] font-mono uppercase tracking-wider px-3 py-1 rounded-full bg-agilistic-accentSoft text-agilistic-accent dark:bg-agilistic-accent/20 border border-agilistic-accent/20';
+      } else {
+        phaseBadge.className = 'text-[11px] font-mono uppercase tracking-wider px-3 py-1 rounded-full bg-teal-50 text-teal-800 dark:bg-teal-950/70 dark:text-teal-300 border border-teal-200 dark:border-teal-800';
+      }
+
+      const cat = CATEGORIES[q.category] || { label: q.category };
+      categoryBadge.textContent = cat.label;
+
+      const depthLabels = { 1: 'Stufe 01 · Locker', 2: 'Stufe 02 · Persönlich', 3: 'Stufe 03 · Tiefgang' };
+      const depthColors = {
+        1: 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300',
+        2: 'bg-amber-50 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300',
+        3: 'bg-rose-50 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300'
+      };
+      depthBadge.textContent = depthLabels[q.depth] || 'Stufe 01';
+      depthBadge.className = `text-xs font-mono px-2.5 py-1 rounded-full ${depthColors[q.depth] || ''}`;
+
+      if (state.favorites.has(q.id)) {
+        favIcon.setAttribute('class', 'w-5 h-5 fill-agilistic-accent text-agilistic-accent');
+      } else {
+        favIcon.setAttribute('class', 'w-5 h-5 text-agilistic-muted');
+      }
+
+      if (q.context && q.context !== 'all') {
+        const contextNames = {
+          daily: 'Praxis-Kontext: Empfohlen für Daily Standup / Kurz-Check',
+          retro: 'Praxis-Kontext: Ideal für Retrospektiven & Systemisches Coaching',
+          kickoff: 'Praxis-Kontext: Ideal für Projekt-Kickoffs & Klärungs-Workshops',
+          teamevent: 'Praxis-Kontext: Perfekt für Team-Offsites & Vertrauensaufbau',
+          friday: 'Praxis-Kontext: Ideal für Freitag / Wochenabschluss'
+        };
+        cardContextNote.textContent = contextNames[q.context] || '';
+      } else {
+        cardContextNote.textContent = 'Praxis-Kontext: Universell einsetzbar (Framework-unabhängig)';
+      }
+    }
+
+    function nextQuestion() {
+      if (state.filteredQuestions.length === 0) return;
+      state.currentIndex = (state.currentIndex + 1) % state.filteredQuestions.length;
+      animateCardPop();
+      renderCurrentQuestionCard();
+    }
+
+    function prevQuestion() {
+      if (state.filteredQuestions.length === 0) return;
+      state.currentIndex = (state.currentIndex - 1 + state.filteredQuestions.length) % state.filteredQuestions.length;
+      animateCardPop();
+      renderCurrentQuestionCard();
+    }
+
+    function shuffleQuestion() {
+      if (state.filteredQuestions.length <= 1) return;
+      let newIdx;
+      do {
+        newIdx = Math.floor(Math.random() * state.filteredQuestions.length);
+      } while (newIdx === state.currentIndex);
+      state.currentIndex = newIdx;
+      animateCardPop();
+      renderCurrentQuestionCard();
+    }
+
+    function animateCardPop() {
+      const card = document.getElementById('questionCard');
+      card.classList.remove('animate-pop');
+      void card.offsetWidth;
+      card.classList.add('animate-pop');
+    }
+
+    // --- 5. FILTER CONTROLS ---
+    function setTypeFilter(type) {
+      state.activeType = type;
+      const bAll = document.getElementById('btnTypeAll');
+      const bIn = document.getElementById('btnTypeCheckin');
+      const bOut = document.getElementById('btnTypeCheckout');
+
+      [bAll, bIn, bOut].forEach(b => {
+        b.className = 'py-2 rounded-lg transition text-agilistic-muted dark:text-zinc-400';
+      });
+
+      const activeClass = 'py-2 rounded-lg transition bg-white dark:bg-zinc-800 text-agilistic-ink dark:text-white shadow-sm';
+      if (type === 'all') bAll.className = activeClass;
+      if (type === 'checkin') bIn.className = activeClass;
+      if (type === 'checkout') bOut.className = activeClass;
+
+      applyFilters();
+    }
+
+    function setDepthFilter(depth) {
+      state.activeDepth = depth;
+      const label = document.getElementById('depthLabel');
+      const b1 = document.getElementById('depthBtn1');
+      const b2 = document.getElementById('depthBtn2');
+      const b3 = document.getElementById('depthBtn3');
+
+      [b1, b2, b3].forEach(b => b.classList.remove('ring-2', 'ring-agilistic-accent', 'bg-agilistic-accentSoft/40', 'dark:bg-zinc-800'));
+
+      if (depth === 0) {
+        label.textContent = 'Alle Stufen';
+      } else {
+        label.textContent = `Stufe 0${depth} aktiv`;
+        const btn = depth === 1 ? b1 : depth === 2 ? b2 : b3;
+        btn.classList.add('ring-2', 'ring-agilistic-accent', 'bg-agilistic-accentSoft/40', 'dark:bg-zinc-800');
+      }
+
+      applyFilters();
+    }
+
+    function toggleCategory(catKey) {
+      if (state.selectedCategories.has(catKey)) {
+        if (state.selectedCategories.size > 1) {
+          state.selectedCategories.delete(catKey);
+        } else {
+          showToast('Mindestens eine Kategorie muss aktiv bleiben.');
+          return;
+        }
+      } else {
+        state.selectedCategories.add(catKey);
+      }
+      renderCategoryPills();
+      applyFilters();
+    }
+
+    function renderCategoryPills() {
+      const container = document.getElementById('categoryContainer');
+      container.innerHTML = '';
+
+      Object.entries(CATEGORIES).forEach(([key, info]) => {
+        const isActive = state.selectedCategories.has(key);
+        const pill = document.createElement('button');
+        pill.onclick = () => toggleCategory(key);
+        pill.className = `px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition border ${
+          isActive
+            ? 'bg-agilistic-ink dark:bg-white text-white dark:text-zinc-900 border-agilistic-ink dark:border-white shadow-sm'
+            : 'bg-agilistic-bg dark:bg-zinc-950 text-agilistic-muted dark:text-zinc-400 border-agilistic-border dark:border-zinc-800 hover:border-agilistic-ink'
+        }`;
+
+        pill.innerHTML = `<i data-lucide="${info.icon}" class="w-3.5 h-3.5 ${isActive ? 'text-agilistic-accent' : ''}"></i> ${info.label}`;
+        container.appendChild(pill);
+      });
+      safeIcons();
+    }
+
+    function setContextFilter(val) {
+      state.activeContext = val;
+      applyFilters();
+    }
+
+    function resetFilters() {
+      state.activeDepth = 0;
+      state.selectedCategories = new Set(Object.keys(CATEGORIES));
+      state.activeContext = 'all';
+      state.searchQuery = '';
+      state.showFavoritesOnly = false;
+      document.getElementById('contextSelect').value = 'all';
+      document.getElementById('searchInput').value = '';
+
+      // Merklisten-Button optisch mit zurücksetzen (blieb vorher aktiv stehen)
+      document.getElementById('favOnlyBtn')
+        .classList.remove('bg-agilistic-accentSoft', 'text-agilistic-accent', 'border-agilistic-accent');
+
+      setTypeFilter('checkin');
+      setDepthFilter(0);
+      renderCategoryPills();
+      applyFilters();
+      showToast('Filter auf Standard zurückgesetzt');
+    }
+
+    // --- 6. FAVORITES & LIST VIEW ---
+    function toggleCurrentFavorite() {
+      if (state.filteredQuestions.length === 0) return;
+      const q = state.filteredQuestions[state.currentIndex];
+      toggleFavoriteId(q.id);
+    }
+
+    function toggleFavoriteId(id) {
+      if (state.favorites.has(id)) {
+        state.favorites.delete(id);
+        showToast('Aus Merkliste entfernt');
+      } else {
+        state.favorites.add(id);
+        showToast('Zur Merkliste hinzugefügt');
+      }
+      saveFavorites();
+      renderCurrentQuestionCard();
+      renderListView();
+      safeIcons();
+    }
+
+    function toggleFavFilter() {
+      state.showFavoritesOnly = !state.showFavoritesOnly;
+      const btn = document.getElementById('favOnlyBtn');
+      if (state.showFavoritesOnly) {
+        btn.classList.add('bg-agilistic-accentSoft', 'text-agilistic-accent', 'border-agilistic-accent');
+      } else {
+        btn.classList.remove('bg-agilistic-accentSoft', 'text-agilistic-accent', 'border-agilistic-accent');
+      }
+      applyFilters();
+    }
+
+    function handleSearch(val) {
+      state.searchQuery = val;
+      applyFilters();
+    }
+
+    function renderListView() {
+      const container = document.getElementById('questionsListContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      if (state.filteredQuestions.length === 0) {
+        container.innerHTML = `<div class="py-12 text-center text-agilistic-muted text-xs">Keine passenden Fragen gefunden.</div>`;
+        return;
+      }
+
+      state.filteredQuestions.forEach((q, idx) => {
+        const isFav = state.favorites.has(q.id);
+        const item = document.createElement('div');
+        item.className = 'py-4 px-3 flex items-center justify-between gap-3 hover:bg-agilistic-bg dark:hover:bg-zinc-800/50 rounded-xl transition group';
+
+        // Gerüst ohne Fragetext — der Text wird unten per textContent gesetzt,
+        // damit eigene Fragen mit <, > oder Anführungszeichen das Layout nicht zerlegen.
+        item.innerHTML = `
+          <div class="flex-1 cursor-pointer" data-select>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full ${q.type === 'checkin' ? 'bg-agilistic-accentSoft text-agilistic-accent' : 'bg-teal-50 text-teal-800 dark:bg-teal-950 dark:text-teal-300'}">
+                ${q.type === 'checkin' ? 'Check-in' : 'Check-out'}
+              </span>
+              <span class="text-[11px] font-mono text-agilistic-muted" data-meta></span>
+            </div>
+            <p class="font-editorial text-xl text-agilistic-ink dark:text-zinc-100 group-hover:text-agilistic-accent transition leading-snug" data-text></p>
+          </div>
+          <div class="flex items-center gap-1">
+            <button data-fav class="p-2 text-agilistic-muted hover:text-agilistic-accent rounded-lg transition" title="Merken" aria-label="Frage merken">
+              <i data-lucide="heart" class="w-4 h-4 ${isFav ? 'fill-agilistic-accent text-agilistic-accent' : ''}"></i>
+            </button>
+            <button data-copy class="p-2 text-agilistic-muted hover:text-agilistic-ink dark:hover:text-white rounded-lg transition" title="Kopieren" aria-label="Frage kopieren">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `;
+
+        const catLabel = (CATEGORIES[q.category] && CATEGORIES[q.category].label) || q.category;
+        item.querySelector('[data-meta]').textContent = `${catLabel} · Stufe 0${q.depth}`;
+        item.querySelector('[data-text]').textContent = `«${q.text}»`;
+        item.querySelector('[data-select]').addEventListener('click', () => selectQuestionFromList(idx));
+        item.querySelector('[data-fav]').addEventListener('click', () => toggleFavoriteId(q.id));
+        item.querySelector('[data-copy]').addEventListener('click', () => copySpecificText(q.text));
+
+        container.appendChild(item);
+      });
+      safeIcons();
+    }
+
+    function selectQuestionFromList(idx) {
+      state.currentIndex = idx;
+      setViewMode('card');
+      renderCurrentQuestionCard();
+    }
+
+    function setViewMode(mode) {
+      state.viewMode = mode;
+      const cardSec = document.getElementById('cardViewSection');
+      const listSec = document.getElementById('listViewSection');
+      const cardBtn = document.getElementById('viewCardBtn');
+      const listBtn = document.getElementById('viewListBtn');
+
+      if (mode === 'card') {
+        cardSec.classList.remove('hidden');
+        listSec.classList.add('hidden');
+        cardBtn.className = 'px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 bg-white dark:bg-zinc-800 shadow-sm text-agilistic-ink dark:text-white';
+        listBtn.className = 'px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 text-agilistic-muted dark:text-zinc-400 hover:text-agilistic-ink';
+      } else {
+        cardSec.classList.add('hidden');
+        listSec.classList.remove('hidden');
+        listSec.classList.add('flex');
+        listBtn.className = 'px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 bg-white dark:bg-zinc-800 shadow-sm text-agilistic-ink dark:text-white';
+        cardBtn.className = 'px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 text-agilistic-muted dark:text-zinc-400 hover:text-agilistic-ink';
+      }
+      safeIcons();
+    }
+
+    // --- 7. AUDIO CHIME & SPEECH SYNTHESIS ---
+    function playChime() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(528, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(792, audioCtx.currentTime + 0.35);
+
+        gainNode.gain.setValueAtTime(0.18, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.7);
+
+        osc.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.75);
+      } catch (e) {}
+    }
+
+    function speakCurrentQuestion() {
+      if (!('speechSynthesis' in window)) {
+        showToast('Sprachausgabe im Browser nicht verfügbar.');
+        return;
+      }
+      if (state.filteredQuestions.length === 0) return;
+      const text = state.filteredQuestions[state.currentIndex].text;
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'de-CH';
+      utterance.rate = 0.95;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // --- 8. FACILITATOR TIMER ---
+    function updateTimerDuration(seconds) {
+      state.timerTotal = parseInt(seconds, 10);
+      resetTimer();
+    }
+
+    function toggleTimer() {
+      if (state.isTimerRunning) {
+        pauseTimer();
+      } else {
+        startTimer();
+      }
+    }
+
+    function startTimer() {
+      // Abgelaufenen Timer beim Start neu aufziehen, statt sofort wieder zu klingeln
+      if (state.timerSeconds <= 0) state.timerSeconds = state.timerTotal;
+      state.isTimerRunning = true;
+      const disp = document.getElementById('timerDisplay');
+      if (disp) disp.classList.add('text-agilistic-accent');
+
+      state.timerInterval = setInterval(() => {
+        if (state.timerSeconds > 0) {
+          state.timerSeconds--;
+          updateTimerDisplay();
+        } else {
+          pauseTimer();
+          playChime();
+          showToast('Timebox abgelaufen — nächste Person!');
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      state.isTimerRunning = false;
+      clearInterval(state.timerInterval);
+      const disp = document.getElementById('timerDisplay');
+      if (disp) disp.classList.remove('text-agilistic-accent');
+    }
+
+    function resetTimer() {
+      pauseTimer();
+      state.timerSeconds = state.timerTotal;
+      updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+      const minutes = Math.floor(state.timerSeconds / 60);
+      const seconds = state.timerSeconds % 60;
+      const str = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      const disp = document.getElementById('timerDisplay');
+      if (disp) {
+        disp.textContent = str;
+        if (state.timerSeconds <= 10 && state.timerSeconds > 0) {
+          disp.classList.add('text-agilistic-accent', 'animate-pulse');
+        } else {
+          disp.classList.remove('text-agilistic-accent', 'animate-pulse');
+        }
+      }
+    }
+
+    // --- 9. CLIPBOARD & UTILS ---
+    function copyQuestionToClipboard() {
+      if (state.filteredQuestions.length === 0) return;
+      const text = state.filteredQuestions[state.currentIndex].text;
+      copySpecificText(text);
+    }
+
+    async function copySpecificText(text) {
+      // Moderne Clipboard-API mit Fallback auf execCommand (ältere Browser / http)
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          showToast('Frage in Zwischenablage kopiert');
+          return;
+        } catch (err) { /* Fallback unten */ }
+      }
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      tempInput.setAttribute('readonly', '');
+      tempInput.style.position = 'fixed';
+      tempInput.style.opacity = '0';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast('Frage in Zwischenablage kopiert');
+      } catch (err) {
+        showToast('Kopieren fehlgeschlagen');
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const text = document.getElementById('toastMessage');
+      text.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // --- 10. MODAL / CUSTOM QUESTIONS ---
+    function openCustomModal() {
+      document.getElementById('customModal').classList.remove('hidden');
+      setTimeout(() => document.getElementById('newPrompt').focus(), 50);
+    }
+
+    function closeCustomModal() {
+      document.getElementById('customModal').classList.add('hidden');
+      document.getElementById('newPrompt').value = '';
+    }
+
+    function saveCustomQuestion() {
+      const text = document.getElementById('newPrompt').value.trim();
+      if (!text) {
+        showToast('Bitte gib einen Fragetext ein.');
+        return;
+      }
+
+      const type = document.getElementById('newType').value;
+      const depth = parseInt(document.getElementById('newDepth').value, 10);
+      const category = document.getElementById('newCategory').value;
+
+      const newQ = {
+        id: 'cust-' + Date.now(),
+        type,
+        depth,
+        category,
+        context: 'all',
+        text
+      };
+
+      state.questions.unshift(newQ);
+      saveCustomQuestionsToStorage(newQ);
+      closeCustomModal();
+      showToast('Eigene Frage lokal gespeichert');
+      applyFilters();
+      state.currentIndex = 0;
+      renderCurrentQuestionCard();
+    }
+
+    function exportData() {
+      try {
+        const savedCustom = localStorage.getItem('custom_checkin_questions');
+        const customQuestions = savedCustom ? JSON.parse(savedCustom) : [];
+        const backupObj = {
+          source: 'Agilistic Check-in Generator (agilistic.ch)',
+          exportedAt: new Date().toISOString(),
+          favorites: [...state.favorites],
+          customQuestions: customQuestions,
+          totalBuiltInQuestions: DEFAULT_QUESTIONS.length
+        };
+        const blob = new Blob([JSON.stringify(backupObj, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `agilistic-checkin-backup-${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('JSON-Backup heruntergeladen');
+      } catch (e) {
+        showToast('Export fehlgeschlagen');
+      }
+    }
+
+    function importData(input) {
+      const file = input.files && input.files[0];
+      input.value = '';           // damit dieselbe Datei erneut gewählt werden kann
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        let data;
+        try {
+          data = JSON.parse(reader.result);
+        } catch (e) {
+          showToast('Datei ist kein gültiges JSON');
+          return;
+        }
+        if (!data || typeof data !== 'object') {
+          showToast('Backup-Datei nicht lesbar');
+          return;
+        }
+
+        let neueFragen = 0, neueFavoriten = 0;
+
+        // Eigene Fragen zusammenführen (vorhandene IDs werden nicht doppelt angelegt)
+        if (Array.isArray(data.customQuestions)) {
+          let bestand = [];
+          try {
+            const saved = localStorage.getItem('custom_checkin_questions');
+            bestand = saved ? JSON.parse(saved) : [];
+          } catch (e) {}
+          const bekannt = new Set([...state.questions.map(q => q.id), ...bestand.map(q => q.id)]);
+
+          data.customQuestions.forEach(q => {
+            if (!q || typeof q.text !== 'string' || !q.text.trim()) return;
+            const sauber = {
+              id: (typeof q.id === 'string' && q.id) ? q.id : 'cust-' + Date.now() + '-' + neueFragen,
+              type: q.type === 'checkout' ? 'checkout' : 'checkin',
+              depth: [1, 2, 3].includes(Number(q.depth)) ? Number(q.depth) : 1,
+              category: CATEGORIES[q.category] ? q.category : 'reflect',
+              context: 'all',
+              text: String(q.text)
+            };
+            if (bekannt.has(sauber.id)) return;
+            bekannt.add(sauber.id);
+            bestand.push(sauber);
+            state.questions.unshift(sauber);
+            neueFragen++;
+          });
+          try {
+            localStorage.setItem('custom_checkin_questions', JSON.stringify(bestand));
+          } catch (e) {}
+        }
+
+        // Favoriten ergänzen, nicht ersetzen
+        if (Array.isArray(data.favorites)) {
+          data.favorites.forEach(id => {
+            if (typeof id === 'string' && !state.favorites.has(id)) {
+              state.favorites.add(id);
+              neueFavoriten++;
+            }
+          });
+          saveFavorites();
+        }
+
+        applyFilters();
+        if (neueFragen === 0 && neueFavoriten === 0) {
+          showToast('Nichts Neues im Backup gefunden');
+        } else {
+          showToast(`Importiert: ${neueFragen} Frage(n), ${neueFavoriten} Favorit(en)`);
+        }
+      };
+      reader.onerror = () => showToast('Datei konnte nicht gelesen werden');
+      reader.readAsText(file);
+    }
+
+    function togglePresentationMode() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {
+          showToast('Vollbild vom Browser blockiert');
+        });
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+      const btn = document.getElementById('presentationIcon');
+      if (btn) {
+        btn.setAttribute('data-lucide', document.fullscreenElement ? 'minimize' : 'maximize');
+        safeIcons();
+      }
+    });
+
+    function applyThemeIcon() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const icon = document.getElementById('themeIcon');
+      if (icon) icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+      safeIcons();
+    }
+
+    function toggleDarkMode() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('agilistic_theme', isDark ? 'dark' : 'light'); } catch (e) {}
+      applyThemeIcon();
+    }
+
+    function initTheme() {
+      let pref = null;
+      try { pref = localStorage.getItem('agilistic_theme'); } catch (e) {}
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (pref === 'dark' || (pref === null && systemDark)) {
+        document.documentElement.classList.add('dark');
+      }
+      applyThemeIcon();
+    }
+
+    window.addEventListener('keydown', (e) => {
+      // Escape soll auch aus einem Eingabefeld heraus das Modal schliessen
+      if (e.code === 'Escape' && !document.getElementById('customModal').classList.contains('hidden')) {
+        closeCustomModal();
+        return;
+      }
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+
+      if (e.code === 'Escape') {
+        closeCustomModal();
+        return;
+      }
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        shuffleQuestion();
+      } else if (e.code === 'ArrowRight') {
+        nextQuestion();
+      } else if (e.code === 'ArrowLeft') {
+        prevQuestion();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      loadSavedData();
+      renderCategoryPills();
+      setTypeFilter('checkin');
+      resetTimer();
+      safeIcons();
+    });
+  </script>
+</body>
+</html>
+<!--
+  ============================================================
+  INTEGRATIONS-NOTIZEN — Check-in & Check-out Generator
+  ============================================================
+  ABLAGE      checkin-generator.html neben index.html und blog.html.
+              Bei Umbenennung canonical + og:url oben anpassen.
+  CSS         Tailwind ist vorkompiliert und inline (kein CDN).
+              Quelle der Klassen: diese Datei. Neue Tailwind-Klassen
+              wirken erst nach erneutem Build (tailwind.config.js im
+              Build-Ordner, Tailwind 3.4).
+  EXTERN      Lucide-Icons (cdnjs) und Google Fonts. Ohne Netz bleibt
+              die Seite bedienbar, Icons/Schriften fallen weg.
+  DATEN       Favoriten & eigene Fragen nur im localStorage des
+              Browsers. Export/Import als JSON (Import ergänzt).
+  FRAGEN      Dauerhaft: Eintrag im Array DEFAULT_QUESTIONS
+              (id, type, category, depth, context, text — id eindeutig).
+  ============================================================
+-->
