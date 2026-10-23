@@ -1346,8 +1346,8 @@ html.dark .nav-back { color: rgba(246,243,238,0.6); }
     function initTheme() {
       let pref = null;
       try { pref = localStorage.getItem('agilistic_theme'); } catch (e) {}
-      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (pref === 'dark' || (pref === null && systemDark)) {
+      // Immer hell starten wie der Rest der Website; dunkel nur nach bewusster Wahl (Mond-Symbol)
+      if (pref === 'dark') {
         document.documentElement.classList.add('dark');
       }
       applyThemeIcon();
